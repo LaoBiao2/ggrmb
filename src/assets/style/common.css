@@ -1,0 +1,70 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,div,
+form,fieldset,legend,button,input,textarea,th,td ,button,input,select,textarea{
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 14px;
+	font-family: "PingFang SC","Microsoft Yahei", "Hiragino Sans GB",arial,sans-serif;
+	-webkit-text-size-adjust: 100%;			
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+}
+a {
+	text-decoration: none;
+}
+
+em {
+	font-style: normal;
+}
+
+ul,ol{
+	list-style:none;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+	outline: none;
+}
+button, input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}
+.content {
+    width: 1200px;
+    display: block;
+    margin: 0 auto;
+}
