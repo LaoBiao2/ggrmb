@@ -68,3 +68,6 @@ table {
     display: block;
     margin: 0 auto;
 }
+.content-top {
+	margin-top: 106px;
+}

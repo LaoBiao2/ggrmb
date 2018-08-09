@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div class="content-top">
         <div class="banner">
             <div class="content">
                 <div class="txt">
@@ -23,6 +24,7 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
 </template>
 
