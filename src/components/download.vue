@@ -35,46 +35,58 @@
 			</div>
 			<div class="box b1">
 				<div class="content">
-					<div class="item">
-						<i></i>
-						<div class="txt">
-							<b>高效执行力</b>
-							<p>迅捷高效提升盈利频率</p>
+					<div class="item item1">
+						<div class="item-box">
+							<i></i>
+							<div class="txt">
+								<b>高效执行力</b>
+								<p>迅捷高效提升盈利频率</p>
+							</div>
 						</div>
 					</div>
-					<div class="item">
-						<i></i>
-						<div class="txt">
-							<b>高效执行力</b>
-							<p>迅捷高效提升盈利频率</p>
+					<div class="item item2">
+						<div class="item-box">
+							<i></i>
+							<div class="txt">
+								<b>高效执行力</b>
+								<p>迅捷高效提升盈利频率</p>
+							</div>
 						</div>
 					</div>
-					<div class="item">
-						<i></i>
-						<div class="txt">
-							<b>高效执行力</b>
-							<p>迅捷高效提升盈利频率</p>
+					<div class="item item3">
+						<div class="item-box">
+							<i></i>
+							<div class="txt">
+								<b>高效执行力</b>
+								<p>迅捷高效提升盈利频率</p>
+							</div>
 						</div>
 					</div>
-					<div class="item">
-						<i></i>
-						<div class="txt">
-							<b>高效执行力</b>
-							<p>迅捷高效提升盈利频率</p>
+					<div class="item item4">
+						<div class="item-box">
+							<i></i>
+							<div class="txt">
+								<b>高效执行力</b>
+								<p>迅捷高效提升盈利频率</p>
+							</div>
 						</div>
 					</div>
-					<div class="item">
-						<i></i>
-						<div class="txt">
-							<b>高效执行力</b>
-							<p>迅捷高效提升盈利频率</p>
+					<div class="item item5">
+						<div class="item-box">
+							<i></i>
+							<div class="txt">
+								<b>高效执行力</b>
+								<p>迅捷高效提升盈利频率</p>
+							</div>
 						</div>
 					</div>
-					<div class="item">
-						<i></i>
-						<div class="txt">
-							<b>高效执行力</b>
-							<p>迅捷高效提升盈利频率</p>
+					<div class="item item6">
+						<div class="item-box">
+							<i></i>
+							<div class="txt">
+								<b>高效执行力</b>
+								<p>迅捷高效提升盈利频率</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -115,7 +127,7 @@ export default {
 			margin: 0 16px;
 		}
 		.banner-content {
-			margin: 72px 155px 0 70px;
+			margin: 72px 130px 0 70px;
 			.fl {
 				width: 798px;
 				p {
@@ -154,12 +166,15 @@ export default {
 			}
 			.fr {
 				margin-top: 130px;
+				width: 195px;
 				li {
 					width: 175px;
 					height: 50px;
 					border-radius: 5px;
 					background-color: #2585ff;
-					margin-bottom: 22px;
+					transition: all .3s;
+					display: block;
+					margin: 0 auto 22px;
 					a {
 						line-height: 50px;
 						font-size: 16px;
@@ -190,6 +205,9 @@ export default {
 						height: 27px;
 					}
 				}
+				li:hover {
+					padding: 0 10px;
+				}
 			}
 		}
 	}
@@ -200,33 +218,73 @@ export default {
 			width: 374px;
 			height: 110px;
 			line-height: 110px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left:34px;
+			transition: all .3s;
+			.item-box {
+				display: inline-block;
+				vertical-align: middle;
+				i {
+					width: 60px;
+					height: 60px;
+					display: inline-block;
+					vertical-align: middle;
+					background: url(../assets/images/download/download_icon.png) 0 -68px no-repeat;
+				}
+				.txt {
+					max-width: 195px;
+					display: inline-block;
+					vertical-align: middle;
+					text-align: left;
+					margin-left: 40px;
+					b {
+						font-size: 20px;
+						color: #333;
+						margin-bottom: 14px;
+						display: block;
+					}
+					p {
+						font-size: 16px;
+						color: #666;
+					}
+				}
+			}
+		}
+		.item:hover {
 			-webkit-box-shadow: 1px 1px 18px #d3d3d3; 
 			-moz-box-shadow: 1px 1px 18px #d3d3d3; 
 			box-shadow: 1px 1px 18px #d3d3d3;
-			display: inline-block;
-			i {
-				width: 78px;
-				height: 60px;
-				display: inline-block;
-				background: url(../assets/images/download/download_icon.png) 0 -68px no-repeat;
-			}
-			.txt {
-				max-width: 195px;
-				display: inline-block;
-				vertical-align: middle;
-				text-align: left;
-				margin-left: 40px;
-				b {
-					font-size: 20px;
-					color: #333;
-					margin-bottom: 14px;
-					display: block;
-				}
-				p {
-					font-size: 16px;
-					color: #666;
-				}
-			}
+			transform: translateY(-10px);
+		}
+		.item:first-child,
+		.item:nth-child(4) {
+			margin-left: 0;
+		}
+		.item:nth-child(4),
+		.item:nth-child(5),
+		.item:nth-child(6) {
+			margin-top: 42px;
+		}
+		.item1 .item-box i {
+			width: 78px;
+		}
+		.item2 .item-box i {
+			width: 67px;
+			background-position-x: -116px;
+		}
+		.item3 .item-box i {
+			width: 64px;
+			background-position-x: -228px;
+		}
+		.item4 .item-box i {
+			background-position: -9px -157px;
+		}
+		.item5 .item-box i {
+			background-position: -120px -157px;
+		}
+		.item6 .item-box i {
+			background-position: -230px -157px;
 		}
 	}
 </style>
