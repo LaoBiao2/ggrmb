@@ -8,7 +8,7 @@
                 </div>                
             </div>            
         </div>
-        <div class="content product clearfix">
+        <div class="content about clearfix">
             <div class="fl">
                <component v-bind:is="type"></component>
             </div>
@@ -18,9 +18,10 @@
                     <a href="" target="_blank" class="demo">申请模拟账户</a>
                 </div>
                 <div class="type_box">
-                    <router-link to="/product/introduce" class="clearfix introduce"><b></b><span>产品介绍</span><i></i></router-link>
-                    <router-link to="/product/rule" class="clearfix rule"><b></b><span>金/银规则</span><i></i></router-link>
-                    <router-link to="/product/term" class="clearfix term"><b></b><span>交易术语</span><i></i></router-link>
+                    <router-link to="/product/introduce" class="clearfix introduce"><b></b><span>品牌介绍</span><i></i></router-link>
+                    <router-link to="/product/rule" class="clearfix rule"><b></b><span>协议声明</span><i></i></router-link>
+                    <router-link to="/product/term" class="clearfix term"><b></b><span>网站公告</span><i></i></router-link>
+                    <router-link to="/product/invest" class="clearfix invest"><b></b><span>投资保障</span><i></i></router-link>
                 </div>
             </div>
         </div>
@@ -32,47 +33,47 @@
 <script>
 import Introduce from "./components/introduce.vue";
 import Rule from "./components/rule.vue";
-import Term from "./components/term.vue";
+import Invest from "./components/invest.vue";
 export default {
-  name: "product",
-  data() {
-    return {
-      type: this.$route.params.type
-    };
-  },
-  components: {
-    introduce: Introduce,
-    rule: Rule,
-    term: Term
-  },
+	name: "about",
+	data() {
+		return {
+		type: this.$route.params.type
+		};
+	},
+	components: {
+		introduce: Introduce,
+		rule: Rule,
+		invest: Invest
+	},
 
-  watch: {
-    $route(to, form) {
-      this.type = to.params.type;
-    }
-  }
+	watch: {
+		$route(to, form) {
+		this.type = to.params.type;
+		}
+	}
 };
 </script>
 
 <style lang="scss">
 body {
-  background: #f5f7f9;
+  	background: #f5f7f9;
 }
 .banner {
-  height: 256px;
-  background: url(../../assets/images/product/banner.jpg) no-repeat;
-  .txt {
-    display: table-cell;
-    height: 256px;
-    vertical-align: middle;
-    h4 {
-      font-size: 28px;
-      color: #ffffff;
-    }
-  }
+	height: 256px;
+	background: url(../../assets/images/product/banner.jpg) no-repeat;
+	.txt {
+		display: table-cell;
+		height: 256px;
+		vertical-align: middle;
+		h4 {
+		font-size: 28px;
+		color: #ffffff;
+		}
+	}
 }
 //
-.product {
+.about {
   margin-top: 50px;
   padding-bottom: 50px;
   .fr {
@@ -128,14 +129,14 @@ body {
         width: 10px;
         height: 18px;
         margin: 5px 30px 0 50px;
-        background: url(../../assets/images/product/p_icon.png) 0 -75px;
+        background: url(../../assets/images/about/about_icon.png) 0 -75px;
       }
       i {
         float: right;
         width: 29px;
         height: 29px;
         margin-right: 55px;
-        background: url(../../assets/images/product/p_icon.png);
+        background: url(../../assets/images/about/about_icon.png);
       }
       span {
         float: left;
@@ -155,6 +156,10 @@ body {
         background-position-x: -219px;
         background-position-y: -36px;
       }
+	  .invest i {
+		background-position-x: -259px;
+        background-position-y: -36px;
+	  }
       a:hover i {
         background-position-y: 0px;
       }
@@ -166,8 +171,8 @@ body {
       }
     }
   }
-  .product-box {
-    width: 880px;
+  .about-box {
+    width: 886px;
   }
 }
 </style>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/index'
 import Download from '@/components/download'
 import Product from '@/components/product/product'
+import About from '@/components/about/about'
 
 Vue.use(Router)
 
@@ -20,6 +21,10 @@ export default new Router({
       path: '/product/:type',
       name: 'Product',
       component: Product,
+    },{
+      path: '/about/:type',
+      name: 'About',
+      component: About,
     }
   ]
 })
