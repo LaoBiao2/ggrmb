@@ -155,13 +155,13 @@ body {
         background-position-x: -219px;
         background-position-y: -36px;
       }
-      a:hover i {
+      a.router-link-active i, a:hover i {
         background-position-y: 0px;
       }
-      a:hover b {
+      a.router-link-active b, a:hover b {
         background-position-x: -21px;
       }
-      a:hover span {
+      a.router-link-active span, a:hover span {
         color: #2e8836;
       }
     }

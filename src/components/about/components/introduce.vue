@@ -1,156 +1,269 @@
 <template>
-    <div>
-        <div class="product-box introduce">
-            <div class="p_box first_box">
-                <i></i>
-                <b></b>
-                <h4>什么是伦敦金</h4>
-                <div class="txt">
-                    伦敦金又称现货黄金或国际现货黄金，为伦敦国际金融期货交易所提供的一种贵金属保证金交易方式， 因起源于伦敦而得名，在国际市场上已有超过300年的历史。由于投资者可不必进行实物金的提取， 省却运输、保管、检验、鉴定等步骤即可于各大市场进行交易买卖； 其买入价与卖出价之间的差额要小于实金买卖的差价，大大降低投资成本，因此为市场上最热门的黄金投资方式。 目前世界上最主要的黄金市场在伦敦、苏黎世、纽约和香港。香港黄金市场在时差上刚好填补了纽约、 芝加哥收市和伦敦开市前的空档，把亚、欧、美的黄金交易市场整合成连贯的全球市场。
-                </div>
-            </div>
-            <div class="p_box second_box">
-                <i></i>
-                <b></b>
-                <h4>什么是伦敦银</h4>
-                <div class="txt">
-                        伦敦银又称现货白银或国际现货白银，与伦敦金一样，都是可以24小时买卖、即期交易、为伦敦国际金融期货交易所 提供的一种投资商品、一种贵金属保证金交易方式。 全球主要的交易市场包括：伦敦、苏黎世、纽约、芝加哥以及香港等地。虽然伦敦仍然是最活跃的实货市场， 但现时多数交易都以合约（纸白银）的形式于美国COMEX市场完成， 而白银现货价格则由COMEX定出。<br>
-                        现货黄金是一种国际性的投资理财产品，投资者可通过黄金交易服务商的交易平台进行24小时买卖交易。 现货黄金交易是利用资金杠杆原理进行的一种合约式买卖， 计价以美元/盎司为单位，买卖以美元结算。
-                </div>
-            </div>
-            <div class="third_box">
-                <div class="item">
-                    <h4><i></i>高价格波幅</h4>
-                    <p>黄金价格经常处于较大的波幅之中，每日升跌一般在10至30美元/盎司或以上。</p>
-                </div>
-                <div class="item">
-                    <h4><i></i>24小时双向交易</h4>
-                    <p>现货黄金市场活跃，周一至周五全天候24小时网上交易，随时随地都可进行投资买卖，获利机会多。 上班一族更不用因日间工作错过交易时间而失去创富机会。</p>
-                </div>
-                <div class="item">
-                    <h4><i></i>交易系统的高稳定</h4>
-                    <p>相对于国内的投资交易市场，金盛金银（GGPM）使用的MT4交易平台操作简易且稳定， 经验丰富的专业团队也一直专注于交易平台的稳定性及安全性。</p>
-                </div>
-                <div class="item">
-                    <h4><i></i>市场资讯透明</h4>
-                    <p>现货黄金价格根据国际黄金市场行情，按照国际惯例进行报价， 较难有内幕消息及内幕交易的情况出现，如此透明的市场资讯可让投资者更有效制定投资策略。</p>
-                </div>
-            </div>
-        </div>
+    <div class="about-box introduce">
+      <div class="introduce-box">
+        <i></i>
+        <p>
+          金盛环球金融集团（Golden Grand Global）,成立于上世纪80年代，作为国际资深金融机构，为重点布局亚太地区一站式融合交易平台战略目标， 于2003年率先在香港设立亚太总部，并随即在新加坡、日本、韩国、越南等地区建立分支机构。 10多年的时间，已为近千万名亚太各国投资者开启全球化投资时代！
+          <br/>金盛金银（ggpm）是金盛金融旗下现货黄金白银专业投资品牌，金盛贵金属业务接受纽西兰FSP监管，客户资金委托第三方银行监管， 双重保障客户投资安全，打造一站式金盛贵金属投资服务平台。
+          <br/>通过金盛金银（ggpm），您可以轻松享受来自全球市场公平透明的报价， 以及优质稳定的交易执行。我们还为您提供专业独到的金盛贵金属投资专家评论、 海量的业界资讯先进的交易工具和丰富的学习资源。无论您的交易经验如何， 金盛金银（ggpm）都将有针对性地帮助您在活跃的全球投资市场中更好地交易， 是您投资历程中的可靠伙伴。
+        </p>
+      </div>
+      <div class="about-content">
+          <ul>
+              <li class="clearfix li-1">
+                  <span class="span-i"><i></i></span><b class="title-b">贵金属投资标的</b>
+                  <p>金盛金银（GGPM）为投资者提供现货黄金（伦敦金）和现货白银（伦敦银）两大贵金属投资产品， 投资者不但可以通过差价投机交易获取收益，同样也是投资、对冲、套利的理想选择。</p>
+              </li>
+              <li class="clearfix li-2">
+                  <span class="span-i"><i></i></span><b class="title-b">公正权威报价</b>
+                  <p>金盛金银（GGPM）为全球投资者提供一个公平透明的投资平台， 产品报价全部采用国际最权威的数据报价，每一笔报价均可进行历史查询 ，金盛贵金属交易编码银行可查，确保数据报价公正透明</p>
+              </li>
+              <li class="clearfix li-3">
+                  <span class="span-i"><i></i></span><b class="title-b">业界风向标杆</b>
+                  <p>金盛金银（GGPM）作为金盛金融集团重要分支， 致力提供最权威报价，最先进交易系统，最稳定交易执行，最专业资讯分析， 秉承集团30多金融服务理念，打造业内独特的金盛贵金属交易平台。</p>
+              </li>
+              <li class="clearfix li-4">
+                  <span class="span-i"><i></i></span><b class="title-b">高效稳定平台</b>
+                  <p>金盛金银（GGPM）采用国际通用的MT4交易平台，90%交易量的覆盖率，强大服务器群确保数据及时稳定， 交易闪电成交，自定义功能简单易操作PC端和手机移动端多交易系统，深受投资者好评。</p>
+              </li>
+              <li class="clearfix li-5">
+                  <span class="span-i"><i></i></span><b class="title-b">平民投资门槛</b>
+                  <p>投资者可在金盛金银（GGPM）免费开立投资账户，采用1：100倍杠杆交易， 仅需100美金即可开始贵金属投资交易， 同时网站提供免费策略服务，使得投资者能够更好的获取最大投资回报。</p>
+              </li>
+          </ul>
+      </div>
     </div>
 </template>
 
 <script>
+import slider from 'vue-concise-slider'
 export default {
-  name: "Introduce"
-};
+    name:'introduce',
+    data () {
+      return {
+        //图片列表[arr]
+        pages:[
+          {
+            title: '',
+            style:{
+             background:'url(src/assets/images/about/clogo_1.jpg)'
+            }
+          },
+          {
+           title: '',
+           style:{
+            background:'black'
+            }
+          },
+          {
+            title: 'slide3',
+            style:{
+              background:'#4bbfc3',
+            },
+          },
+          {
+            title: '',
+            style:{
+             background:'red'
+            }
+          },
+          {
+           title: '',
+           style:{
+            background:'black'
+            }
+          },
+          {
+            title: 'slide3',
+            style:{
+              background:'#4bbfc3',
+            },
+          },
+          {
+            title: '',
+            style:{
+             background:'red'
+            }
+          },
+          {
+           title: '',
+           style:{
+            background:'black'
+            }
+          },
+          {
+            title: 'slide3',
+            style:{
+              background:'#4bbfc3',
+            },
+          },
+          {
+            title: '',
+            style:{
+             background:'red'
+            }
+          },
+          {
+           title: '',
+           style:{
+            background:'black'
+            }
+          },
+          {
+            title: 'slide3',
+            style:{
+              background:'#4bbfc3',
+            },
+          }
+        ],
+        //滑动配置[obj]
+        sliderinit: {
+          currentPage: 0,//当前页码
+          thresholdDistance: 500,//滑动判定距离
+          thresholdTime: 100,//滑动判定时间
+        //   autoplay:1000,//自动滚动[ms]
+          loop:true,//循环滚动
+          direction:'horizontal',//方向设置，水平滚动
+          infinite: 12,//无限滚动前后遍历数
+          slidesToScroll:1,//每次滑动项数
+        }
+      }
+    },
+    components: {
+        slider
+    }
+}
 </script>
 
 <style lang="scss">
-.product {
-  .fl {
-    .introduce {
-      width: 880px;
-      padding-bottom: 50px;
-      .p_box {
-        position: relative;
-        height: 350px;
-        padding: 30px;
-        margin-bottom: 50px;
-        box-sizing: border-box;
-        border-radius: 10px;
-        background: #ffffff;
-        border: 1px solid #2e8836;
-        transition: all 0.3s ease-in-out;
-        i {
-          position: absolute;
-          top: 0;
-          left: 45px;
-          display: block;
-          width: 42px;
-          height: 61px;
-          background: url(../../../assets/images/product/p_icon.png) no-repeat;
-        }
-        b {
-          position: absolute;
-          right: 45px;
-          top: 25px;
-          display: block;
-          width: 31px;
-          height: 27px;
-          background: url(../../../assets/images/product/p_icon.png) no-repeat -265px
-            0;
-        }
-        h4 {
-          font-size: 20px;
-          padding: 0 0 22px 70px;
-        }
-        .txt {
-          font-size: 16px;
-          color: #666666;
-          line-height: 40px;
-          padding: 10px 35px 0 35px;
-        }
+.about-box.introduce {
+    // width: 886px;
+    .introduce-box {
+      position: relative;
+      width: 882px;
+      margin: 0 auto;
+      padding: 37px 45px 37px 107px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      -webkit-box-shadow: 1px 1px 18px #b7b7b7; 
+      -moz-box-shadow: 1px 1px 18px #b7b7b7; 
+      box-shadow: 1px 1px 18px #b7b7b7;
+      background-color: #fff;
+      i {
+        width: 141px;
+        height: 142px;
+        display: inline-block;
+        background: url(../../../assets/images/about/introduce_icon.png) no-repeat center;
+        position: absolute;
+        left: -46px;
+        top: 50%;
+        transform: translateY(-50%);
       }
-      .p_box:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 30px 0 rgba(183, 183, 183, 0.7);
-      }
-      .first_box {
-        i {
-          background-position: 0 0;
-        }
-        h4 {
-          color: #2e8836;
-          border-bottom: 1px solid #2e8836;
-        }
-      }
-      .second_box {
-        border: 1px solid #e98024;
-        i {
-          background-position: -51px 0;
-        }
-        h4 {
-          color: #e98024;
-          border-bottom: 1px solid #e98024;
-        }
-      }
-      .third_box {
-        background: #ffffff;
-        padding: 50px 50px 12px 58px;
-        .item {
-          padding: 0 0 16px 25px;
-          border-bottom: 1px dashed #dadada;
-          margin-bottom: 22px;
-          h4 {
-            position: relative;
-            font-size: 18px;
-            color: #333333;
-            font-weight: bold;
-            margin-bottom: 10px;
-            i {
-              position: absolute;
-              left: -23px;
-              top: 50%;
-              margin-top: -3px;
-              display: block;
-              width: 6px;
-              height: 6px;
-              background: #2e8836;
-              border-radius: 50%;
-            }
-          }
-          p {
-            font-size: 16px;
-            color: #666666;
-            line-height: 28px;
-          }
-        }
-        .item:last-child {
-          border: 0;
-        }
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 40px;
       }
     }
-  }
+    .about-content {
+        margin-top: 52px;
+        ul {
+            width: 884px;
+            margin: 0 auto;
+            font-size: 0;
+            li {
+                width: 100%;
+                border-radius: 10px;
+                padding: 18px 24px 18px 27px;
+                box-sizing: border-box;
+                margin-bottom: 16px;
+                display: block;
+                transition: all .3s;
+                .span-i {
+                    width: 125px;
+                    height: 118px;
+                    border-radius: 10px;
+                    float: left;
+                    margin-right: 22px;
+                    -webkit-box-shadow: 1px 1px 18px #eb5c28; 
+                    -moz-box-shadow: 1px 1px 18px #eb5c28; 
+                    box-shadow: 1px 1px 18px #eb5c28;
+                    background-color: #eb5c28;
+                    i {
+                        width: 60px;
+                        height: 60px;
+                        display: block;
+                        margin: 29px auto;
+                        background: url(../../../assets/images/about/about_icon.png) 0 -182px no-repeat;
+                    }
+                }
+                b {
+                    display: block;
+                    font-size: 18px;
+                    color: #333;
+                    line-height: 22px;
+                    margin-bottom: 12px;
+                }
+                p {
+                    // float: left;
+                    display: block;
+                    line-height: 28px;
+                    font-size: 16px;
+                    color: #666;
+                }
+            }
+            li.active,
+            li:hover {
+                -webkit-box-shadow: 1px 1px 18px #b7b7b7; 
+                -moz-box-shadow: 1px 1px 18px #b7b7b7; 
+                box-shadow: 1px 1px 18px #b7b7b7;
+            }
+            .li-2 {
+                .span-i {
+                    background-color: #53ad38;
+                    -webkit-box-shadow: 1px 1px 18px #53ad38; 
+                    -moz-box-shadow: 1px 1px 18px #53ad38; 
+                    box-shadow: 1px 1px 18px #53ad38;
+                    i {
+                        background-position-x: -80px;
+                    }
+                }
+            }
+            .li-3 {
+                .span-i {
+                    background-color: #3458de;
+                    -webkit-box-shadow: 1px 1px 18px #3458de; 
+                    -moz-box-shadow: 1px 1px 18px #3458de; 
+                    box-shadow: 1px 1px 18px #3458de;
+                    i {
+                        background-position-x: -160px;
+                    }
+                }
+            }
+            .li-4 {
+                .span-i {
+                    background-color: #7d31cb;
+                    -webkit-box-shadow: 1px 1px 18px #7d31cb; 
+                    -moz-box-shadow: 1px 1px 18px #7d31cb; 
+                    box-shadow: 1px 1px 18px #7d31cb;
+                    i {
+                        background-position-x: -240px;
+                    }
+                }
+            }
+            .li-5 {
+                .span-i {
+                    background-color: #2c40b4;
+                    -webkit-box-shadow: 1px 1px 18px #2c40b4; 
+                    -moz-box-shadow: 1px 1px 18px #2c40b4; 
+                    box-shadow: 1px 1px 18px #2c40b4;
+                    i {
+                        background-position-y: -260px;
+                    }
+                }
+            }
+        }
+    }
 }
 </style>
+

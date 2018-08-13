@@ -80,6 +80,7 @@ export default {
 
 <style lang="scss">
 .footer {
+    text-align: center;
     background-color: #2a3052;
     ul {
         li {

@@ -4,7 +4,7 @@
         <div class="banner">
             <div class="content">
                 <div class="txt">
-                    <h4>产品介绍</h4>
+                    <h4>关于金盛</h4>
                 </div>                
             </div>            
         </div>
@@ -18,10 +18,10 @@
                     <a href="" target="_blank" class="demo">申请模拟账户</a>
                 </div>
                 <div class="type_box">
-                    <router-link to="/product/introduce" class="clearfix introduce"><b></b><span>品牌介绍</span><i></i></router-link>
-                    <router-link to="/product/rule" class="clearfix rule"><b></b><span>协议声明</span><i></i></router-link>
-                    <router-link to="/product/term" class="clearfix term"><b></b><span>网站公告</span><i></i></router-link>
-                    <router-link to="/product/invest" class="clearfix invest"><b></b><span>投资保障</span><i></i></router-link>
+                    <router-link to="/about/introduce" class="clearfix introduce"><b></b><span>品牌介绍</span><i></i></router-link>
+                    <router-link to="/about/protocol" class="clearfix protocol"><b></b><span>协议声明</span><i></i></router-link>
+                    <router-link to="/about/notice" class="clearfix notice"><b></b><span>网站公告</span><i></i></router-link>
+                    <router-link to="/about/invest" class="clearfix invest"><b></b><span>投资保障</span><i></i></router-link>
                 </div>
             </div>
         </div>
@@ -32,7 +32,8 @@
 
 <script>
 import Introduce from "./components/introduce.vue";
-import Rule from "./components/rule.vue";
+import Protocol from "./components/protocol.vue";
+import Notice from "./components/notice.vue";
 import Invest from "./components/invest.vue";
 export default {
 	name: "about",
@@ -43,7 +44,8 @@ export default {
 	},
 	components: {
 		introduce: Introduce,
-		rule: Rule,
+		protocol: Protocol,
+		notice: Notice,
 		invest: Invest
 	},
 
@@ -61,7 +63,7 @@ body {
 }
 .banner {
 	height: 256px;
-	background: url(../../assets/images/product/banner.jpg) no-repeat;
+	background: url(../../assets/images/about/banner.jpg) no-repeat;
 	.txt {
 		display: table-cell;
 		height: 256px;
@@ -148,31 +150,31 @@ body {
         background-position-x: -137px;
         background-position-y: -36px;
       }
-      .rule i {
+      .protocol i {
         background-position-x: -179px;
         background-position-y: -36px;
       }
-      .term i {
+      .notice i {
         background-position-x: -219px;
         background-position-y: -36px;
       }
-	  .invest i {
-		background-position-x: -259px;
+      .invest i {
+        background-position-x: -259px;
         background-position-y: -36px;
-	  }
-      a:hover i {
+      }
+      a.router-link-active i, a:hover i {
         background-position-y: 0px;
       }
-      a:hover b {
+      a.router-link-active b, a:hover b {
         background-position-x: -21px;
       }
-      a:hover span {
+      a.router-link-active span, a:hover span {
         color: #2e8836;
       }
     }
   }
   .about-box {
-    width: 886px;
+    width: 915px;
   }
 }
 </style>

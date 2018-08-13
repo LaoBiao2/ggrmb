@@ -1,6 +1,6 @@
 <template>
-    <div class="product-box invest">
-        <div class="tab-content">
+    <div class="about-box invest">
+        <div class="about-content">
             <ul>
                 <li class="li-1">
                     <span class="span-i"><i></i></span><b class="title-b">专业投资服务</b>
@@ -20,19 +20,79 @@
                 </li>
             </ul>
         </div>
+        <div class="about-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_6.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_7.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_8.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_9.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_10.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_11.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../assets/images/about/clogo_12.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button swiper-button-prev"></div>
+            <div class="swiper-button swiper-button-next"></div>
+        </div>
     </div>
 </template>
 
 <script>
+import Swiper from 'swiper'; 
+import 'swiper/dist/css/swiper.min.css';
 export default {
-    name:'invest'
+    name:'invest',
+    data () {
+      return {
+      }
+    },
+    mounted(){
+        var mySwiper = new Swiper('.swiper-container', {
+            loop:true,
+            slidesPerView : 6,
+            loopedSlides : 12,
+            slidesPerGroup : 6,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+        })
+    },
 }
 </script>
 
 <style lang="scss">
-.product-box.invest {
-    width: 886px;
-    .tab-content {
+.about-box.invest {
+    // width: 886px;
+    .about-content {
         margin-top: 52px;
         ul {
             width: 884px;
@@ -91,9 +151,63 @@ export default {
                     -webkit-box-shadow: 1px 1px 18px #e98024; 
                     -moz-box-shadow: 1px 1px 18px #e98024; 
                     box-shadow: 1px 1px 18px #e98024;
+                    i {
+                        background-position-x: -80px;
+                    }
                 }
-                
             }
+            .li-3 {
+                .span-i {
+                    background-color: #109ee8;
+                    -webkit-box-shadow: 1px 1px 18px #109ee8; 
+                    -moz-box-shadow: 1px 1px 18px #109ee8; 
+                    box-shadow: 1px 1px 18px #109ee8;
+                    i {
+                        background-position-x: -160px;
+                    }
+                }
+            }
+            .li-4 {
+                .span-i {
+                    background-color: #e7ba1e;
+                    -webkit-box-shadow: 1px 1px 18px #e7ba1e; 
+                    -moz-box-shadow: 1px 1px 18px #e7ba1e; 
+                    box-shadow: 1px 1px 18px #e7ba1e;
+                    i {
+                        background-position-x: -240px;
+                    }
+                }
+            }
+        }
+    }
+    .about-swiper {
+        position: relative;
+        .swiper-container {
+            // width: 882px;
+            // height: 74px;
+            .swiper-slide img {
+                width: 147px;
+                height: 74px;
+            }
+        }
+        .swiper-button {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: #fff;
+            overflow: hidden;
+            background: url(../../../assets/images/about/about_icon.png) -40px -61px no-repeat;
+            background-color: #fff;
+            -webkit-box-shadow: 1px 1px 18px #6a6a6a; 
+            -moz-box-shadow: 1px 1px 18px #6a6a6a; 
+            box-shadow: 1px 1px 18px #6a6a6a;
+        }
+        .swiper-button-prev {
+            left: -53px;
+        }
+        .swiper-button-next {
+            background-position-x: -72px;
+            right: -46px;
         }
     }
 }

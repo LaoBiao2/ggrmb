@@ -26,11 +26,11 @@
 					<div class="logo"><img src="../../assets/images/logo.png" alt=""></div>
 					<a href="javascript:;" class="a-register">注册</a>
 					<ul>
-						<li class="active">
-							<a href="javascript:;">首页</a>
+						<li>
+                            <router-link to="/" exact>首页</router-link>
 						</li>
 						<li>
-							<a href="javascript:;">关于金盛</a>
+							<router-link to="/about/introduce">关于金盛</router-link>
                             <div class="sec-menu">
                                 <span>品牌介绍</span>
                                 <span>合作伙伴</span>
@@ -40,7 +40,7 @@
                             </div>
 						</li>
 						<li>
-							<a href="javascript:;">研究中心</a>
+							<router-link to="/about">研究中心</router-link>
                             <div class="sec-menu">
                                 <span>行情分析</span>
                                 <span>实盘策略</span>
@@ -49,16 +49,15 @@
                             </div>
 						</li>
 						<li>
-							<a href="javascript:;">交易规则</a>
+							<router-link to="/product/introduce" exact>交易规则</router-link>
                             <div class="sec-menu">
                                 <span>产品介绍</span>
-                                <span>黄金规则</span>
-                                <span>白银规则</span>
+                                <span>金银规则</span>
                                 <span>交易术语</span>
                             </div>
 						</li>
 						<li>
-							<a href="javascript:;">平台下载</a>
+							<router-link to="/download">平台下载</router-link>
                             <div class="sec-menu">
                                 <span>真实开户</span>
                                 <span>模拟开户</span>
@@ -66,7 +65,7 @@
                             </div>
 						</li>
 						<li>
-							<a href="javascript:;">代理申请</a>
+							<router-link to="/product">代理申请</router-link>
 						</li>
 					</ul>
 				</div>
@@ -81,6 +80,23 @@ export default {
     data () {
         return {
         }
+    },
+    mounted () {
+        window.addEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+        handleScroll () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            // console.log(scrollTop)
+            var offsetTop = document.querySelector('.header').offsetTop;
+
+            if(scrollTop<=16){
+            offsetTop = 26 - Number(scrollTop);
+            document.querySelector('.header').style.top = offsetTop+'px';
+            }else{
+            document.querySelector('.header').style.top = '0px';
+            }
+        },
     }
 }
 </script>
@@ -93,7 +109,7 @@ export default {
     background-color: #15212d;
     color: #fff;
     font-size: 14px;
-    position: fixed;
+    // position: fixed;
     top: 0;
     left: 0;
     z-index: 98;
@@ -197,15 +213,20 @@ export default {
                     color: #fff;
                     font-size: 18px;
                 }
+                a.router-link-exact-active {
+                    color: #e98024;
+                }
                 .sec-menu {
                     display: none;
                     width: 100px;
                     position: absolute;
                     top: 76px;
                     left: 50%;
-                    transform: translateX(-50%);
+                    transform: translateX(-50%) translateY(-100%);
                     background-color: #fff;
                     border: 1px solid #f2f2f2;
+                    text-align: center;
+                    transition: all .3s;
                     span {
                         display: block;
                         font-size: 16px;
@@ -214,17 +235,13 @@ export default {
                     }
                 }
             }
-            li.active {
-                a {
-                    color: #e98024;
-                }
-            } 
             li:hover {
                 a {
                     color: #e98024;
                 }
                 .sec-menu {
                     display: block;
+                    transform: translateX(-50%) translateY(0);
                     span:hover {
                         background-color: #2a3052;
                         color: #fff;

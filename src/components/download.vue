@@ -108,6 +108,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 	.banner {
+		text-align: center;
 		height: 835px;
 		padding-top: 90px;
 		box-sizing: border-box;
@@ -213,6 +214,7 @@ export default {
 	}
 	
 	.b1 {
+		text-align: center;
 		padding: 63px 0;
 		.item {
 			width: 374px;

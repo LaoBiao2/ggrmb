@@ -1,5 +1,7 @@
 .banner {
     text-align: center;
+    width: 100%;
+    height: 523px;
     padding: 143px 0 129px;
     box-sizing: border-box;
     background: url(../assets/images/index/banner_img.png) no-repeat top;
@@ -35,6 +37,7 @@
 }
 
 .box {
+    text-align: center;
     .title {
         font-size: 28px;
         color: #e98024;
