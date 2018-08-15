@@ -52,11 +52,10 @@
 					<h5 class="title">行情资讯</h5>
 					<div class="nav-top clearfix">
 						<ul>
-							<li>行情分析</li>
-							<li>市场动态</li>
-							<li>实盘策略</li>
-							<li>金银课堂</li>
-							<i></i>
+							<li class="active">行情分析<i></i></li>
+							<li>市场动态<i></i></li>
+							<li>实盘策略<i></i></li>
+							<li>金银课堂<i></i></li>
 						</ul>
 						<a href="javascript:;" class="more-a">More &gt;</a>
 					</div>

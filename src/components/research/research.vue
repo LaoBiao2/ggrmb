@@ -4,11 +4,11 @@
         <div class="banner">
             <div class="content">
                 <div class="txt">
-                    <h4>关于金盛</h4>
+                    <h4>研究中心</h4>
                 </div>
             </div>
         </div>
-        <div class="content about clearfix">
+        <div class="content research clearfix">
             <div class="fl">
                <component v-bind:is="type"></component>
             </div>
@@ -18,10 +18,10 @@
                     <a href="" target="_blank" class="demo">申请模拟账户</a>
                 </div>
                 <div class="type_box">
-                    <router-link to="/about/introduce" class="clearfix introduce"><b></b><span>品牌介绍</span><i></i></router-link>
-                    <router-link to="/about/protocol" class="clearfix protocol"><b></b><span>协议声明</span><i></i></router-link>
-                    <router-link to="/about/notice" class="clearfix notice"><b></b><span>网站公告</span><i></i></router-link>
-                    <router-link to="/about/invest" class="clearfix invest"><b></b><span>投资保障</span><i></i></router-link>
+                    <router-link to="/research/news1" class="clearfix introduce"><b></b><span>行情分析</span><i></i></router-link>
+                    <router-link to="/research/news2" class="clearfix protocol"><b></b><span>实盘策略</span><i></i></router-link>
+                    <router-link to="/research/news3" class="clearfix notice"><b></b><span>金银课堂</span><i></i></router-link>
+                    <router-link to="/research/news4" class="clearfix invest"><b></b><span>市场动态</span><i></i></router-link>
                 </div>
             </div>
         </div>
@@ -31,22 +31,26 @@
 
 
 <script>
-import Introduce from "./components/introduce.vue";
-import Protocol from "./components/protocol.vue";
-import Notice from "./components/notice.vue";
-import Invest from "./components/invest.vue";
+import News from "./components/news.vue";
+import News1 from "./components/news1.vue";
+import News2 from "./components/news2.vue";
+import News3 from "./components/news3.vue";
+import News4 from "./components/news4.vue";
+import NewsN from "./components/newsN.vue";
 export default {
-	name: "about",
+	name: "research",
 	data() {
 		return {
 		type: this.$route.params.type
 		};
 	},
 	components: {
-		introduce: Introduce,
-		protocol: Protocol,
-		notice: Notice,
-		invest: Invest
+		news: News,
+		news1: News1,
+		news2: News2,
+		news3: News3,
+		news4: News4,
+		newsN: NewsN,
 	},
 
 	watch: {
@@ -63,7 +67,7 @@ body {
 }
 .banner {
 	height: 256px;
-	background: url(../../assets/images/about/banner.jpg) no-repeat;
+	background: url(../../assets/images/research/banner.jpg) no-repeat;
 	.txt {
 		display: table-cell;
 		height: 256px;
@@ -75,7 +79,7 @@ body {
 	}
 }
 //
-.about {
+.research {
   margin-top: 50px;
   padding-bottom: 50px;
   .fr {
@@ -131,14 +135,14 @@ body {
         width: 10px;
         height: 18px;
         margin: 5px 30px 0 50px;
-        background: url(../../assets/images/about/about_icon.png) 0 -75px;
+        background: url(../../assets/images/research/research_icon.png) 0 -75px;
       }
       i {
         float: right;
         width: 29px;
         height: 29px;
         margin-right: 55px;
-        background: url(../../assets/images/about/about_icon.png);
+        background: url(../../assets/images/research/research_icon.png);
       }
       span {
         float: left;
@@ -173,7 +177,7 @@ body {
       }
     }
   }
-  .about-box {
+  .research-box {
     width: 915px;
   }
 }

@@ -120,22 +120,28 @@
         ul {
             height: 48px;
             float: left;
-            position: relative;
             li {
                 width: 150px;
                 font-size: 20px;
                 color: #333;
                 line-height: 48px;
                 cursor: pointer;
+                position: relative;
+                i {
+                    width: 0;
+                    height: 3px;
+                    background-color: #2a3052;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all .3s;
+                }
             }
-            i {
-                width: 150px;
-                height: 3px;
-                display: block;
-                background-color: #2a3052;
-                position: absolute;
-                bottom: 0;
-                left: 0;
+            li:hover,li.active {
+                i {
+                    width: 150px;
+                }
             }
         }
         .more-a {
@@ -222,7 +228,7 @@
                     p.li-title {
                         font-size: 20px;
                         line-height: 1;
-                        margin-bottom: 13px; 
+                        margin-bottom: 13px;
                         font-weight: bold;
                     }
                     p.li-content {
@@ -257,7 +263,7 @@
         margin: 24px auto 87px;
     }
     .content-box {
-        padding: 0 226px 0 240px;
+        padding: 0 216px 0 240px;
         box-sizing: border-box;
         ul.left-ul {
             width: 435px;
@@ -285,15 +291,19 @@
             }
         }
         ul.right-ul {
+            width: 195px;
             float: right;
+            text-align: center;
             li {
                 display: block;
+                margin: 0 auto;
                 width: 175px;
                 height: 50px;
                 border-radius: 5px;
                 background-color: #2585ff;
                 margin-bottom: 22px;
                 cursor: pointer;
+                transition: all .3s;
                 i {
                     width: 23px;
                     height: 27px;
@@ -308,6 +318,9 @@
                     font-size: 16px;
                     color: #fff;
                 }
+            }
+            li:hover {
+              padding: 0 10px;
             }
             .li-2 {
                 background-color: #1e2835;
