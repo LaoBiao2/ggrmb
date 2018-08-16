@@ -4,7 +4,7 @@
     height: 523px;
     padding: 143px 0 129px;
     box-sizing: border-box;
-    background: url(../assets/images/index/banner_img.png) no-repeat top;
+    background: url(../../static/index/banner_img.png) no-repeat top;
     h2 {
         font-size: 42px;
         color: #2a3052;
@@ -65,14 +65,13 @@
                 height: 37px;
                 display: block;
                 margin: 0 auto 19px;
-                background: url(../assets/images/index/index_icon.png) 0 0 no-repeat;
+                background: url(../../static/index/index_icon.png) 0 0 no-repeat;
             }
             b {
                 font-size: 18px;
                 margin-bottom: 7px;
                 display: block;
                 line-height: 1;
-
             }
             p {
                 font-size: 16px;
@@ -138,9 +137,10 @@
                     transition: all .3s;
                 }
             }
-            li:hover,li.active {
+            li:hover,
+            li.active {
                 i {
-                    width: 150px;
+                    width: 120px;
                 }
             }
         }
@@ -182,8 +182,7 @@
                 cursor: pointer;
                 position: static;
                 display: block;
-                border-bottom: 1px solid #eaeaea;
-                // height: 48px;
+                border-bottom: 1px solid #eaeaea; // height: 48px;
                 text-align: left;
                 .content-box {
                     width: 420px;
@@ -195,7 +194,7 @@
                         color: #333;
                         line-height: 48px;
                         overflow: hidden;
-                        text-overflow:ellipsis;
+                        text-overflow: ellipsis;
                         white-space: nowrap;
                         i {
                             width: 6px;
@@ -232,7 +231,7 @@
                         font-weight: bold;
                     }
                     p.li-content {
-                        overflow : hidden;
+                        overflow: hidden;
                         text-overflow: ellipsis;
                         display: -webkit-box;
                         -webkit-line-clamp: 2;
@@ -254,7 +253,7 @@
 
 .b3 {
     padding: 68px 0 332px;
-    background: url(../assets/images/index/b3_img.png) no-repeat bottom;
+    background: url(../../static/index/b3_img.png) no-repeat bottom;
     background-color: #f2f2f2;
     span.title2 {
         font-size: 16px;
@@ -308,7 +307,7 @@
                     width: 23px;
                     height: 27px;
                     display: inline-block;
-                    background: url(../assets/images/index/index_icon.png) -10px -101px no-repeat;
+                    background: url(../../static/index/index_icon.png) -10px -101px no-repeat;
                     vertical-align: -7px;
                     margin-right: 14px;
                 }
@@ -320,7 +319,7 @@
                 }
             }
             li:hover {
-              padding: 0 10px;
+                padding: 0 10px;
             }
             .li-2 {
                 background-color: #1e2835;

@@ -1,77 +1,88 @@
 <template>
-  	<div class="footer-box">
-		<div class="footer">
-			<div class="content">
-				<ul class="link-ul">
-					<li>金盛荣誉</li>
-					<li>合作机构</li>
-					<li>友情链接</li>
-					<li>关于金盛</li>
-					<li>市场动态</li>
-					<li>实盘策略</li>
-					<li>软件下载</li>
-					<li>产品介绍</li>
-					<li>马上咨询</li>
-					<li>申请代理</li>
-				</ul>
-				<ul class="honor">
-					<i class="honor-i"></i>
-					<li class="li-1">
-						<i></i>
-						<span>贵金属业最佳<br/>交易平台大奖</span>
-					</li>
-					<li class="li-2">
-						<i></i>
-						<span>贵金属业最佳<br/>交易平台大奖</span>
-					</li>
-					<li class="li-3">
-						<i></i>
-						<span>贵金属业最佳<br/>交易平台大奖</span>
-					</li>
-					<li class="li-4">
-						<i></i>
-						<span>贵金属业最佳<br/>交易平台大奖</span>
-					</li>
-					<li class="li-5">
-						<i></i>
-						<span>贵金属业最佳<br/>交易平台大奖</span>
-					</li>
-					<li class="li-6">
-						<i></i>
-						<span>贵金属业最佳<br/>交易平台大奖</span>
-					</li>
-				</ul>
-				<div class="bottom-box clearfix">
-					<div class="left-box">
-						<ul>
-							<li class="li-1"><a href="javascript:;"></a></li>
-							<li class="li-2"><a href="javascript:;"></a></li>
-							<li class="li-3"><a href="javascript:;"></a></li>
-							<li class="li-4"><a href="javascript:;"></a></li>
-							<li class="li-5"><a href="javascript:;"></a></li>
-						</ul>
-						<span class="copyright">Copyright 2017-2018 © GGFSG 金盛金融</span>
-						<span class="tip">投资有风险，选择需谨慎，预期或测算收益不等于实际收益。 </span>
-					</div>
-					<div class="right-box">
-						<div>
-							<span class="span-1"></span>
-							<span class="span-2"></span>
-							<span class="span-3"></span>
-						</div>
-						<a href="javascript:;" class="service"><i></i>在线客服</a>
-						<span class="tel">客服热线：400-009-2727</span>
-					</div>
-				</div>
-			</div>
-		</div>
-  	</div>
+    <div class="footer-box">
+        <div class="footer">
+            <div class="content">
+                <ul class="link-ul">
+                    <li>金盛荣誉</li>
+                    <li>合作机构</li>
+                    <li>友情链接</li>
+                    <li>关于金盛</li>
+                    <li>市场动态</li>
+                    <li>实盘策略</li>
+                    <li>软件下载</li>
+                    <li>产品介绍</li>
+                    <li>马上咨询</li>
+                    <li>申请代理</li>
+                </ul>
+                <ul class="honor">
+                    <i class="honor-i"></i>
+                    <li class="li-1">
+                        <i></i>
+                        <span>贵金属业最佳<br/>交易平台大奖</span>
+                    </li>
+                    <li class="li-2">
+                        <i></i>
+                        <span>贵金属业最佳<br/>交易平台大奖</span>
+                    </li>
+                    <li class="li-3">
+                        <i></i>
+                        <span>贵金属业最佳<br/>交易平台大奖</span>
+                    </li>
+                    <li class="li-4">
+                        <i></i>
+                        <span>贵金属业最佳<br/>交易平台大奖</span>
+                    </li>
+                    <li class="li-5">
+                        <i></i>
+                        <span>贵金属业最佳<br/>交易平台大奖</span>
+                    </li>
+                    <li class="li-6">
+                        <i></i>
+                        <span>贵金属业最佳<br/>交易平台大奖</span>
+                    </li>
+                </ul>
+                <div class="bottom-box clearfix">
+                    <div class="left-box">
+                        <ul>
+                            <li class="li-1">
+                                <a href="javascript:;"></a>
+                            </li>
+                            <li class="li-2">
+                                <a href="javascript:;"></a>
+                            </li>
+                            <li class="li-3">
+                                <a href="javascript:;"></a>
+                            </li>
+                            <li class="li-4">
+                                <a href="javascript:;"></a>
+                            </li>
+                            <li class="li-5">
+                                <a href="javascript:;"></a>
+                            </li>
+                        </ul>
+                        <span class="copyright">Copyright 2017-2018 © GGFSG 金盛金融</span>
+                        <span class="tip">投资有风险，选择需谨慎，预期或测算收益不等于实际收益。 </span>
+                    </div>
+                    <div class="right-box">
+                        <div>
+                            <span class="span-1"></span>
+                            <span class="span-2"></span>
+                            <span class="span-3"></span>
+                        </div>
+                        <a href="javascript:;" class="service">
+                            <i></i>在线客服</a>
+                        <span class="tel">客服热线：400-009-2727</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
     name: "vueFooter",
-    data () {
+    data() {
         return {
         }
     }
@@ -131,7 +142,7 @@ export default {
                 height: 82px;
                 display: inline-block;
                 vertical-align: middle;
-                background: url(../../assets/images/common_icon.png) 0 9px no-repeat;
+                background: url(../../../static/common_icon.png) 0 9px no-repeat;
             }
             span {
                 display: inline-block;
@@ -175,7 +186,8 @@ export default {
                     a {
                         width: 100%;
                         height: 100%;
-                        background: url(../../assets/images/common_icon.png) -10px -217px no-repeat;
+                        background: url(../../../static/common_icon.png) -10px -217px
+                            no-repeat;
                         display: inline-block;
                     }
                 }
@@ -210,7 +222,8 @@ export default {
                     width: 91px;
                     height: 41px;
                     display: inline-block;
-                    background: url(../../assets/images/common_icon.png) -10px -270px no-repeat;
+                    background: url(../../../static/common_icon.png) -10px -270px
+                        no-repeat;
                 }
                 .span-2 {
                     width: 114px;

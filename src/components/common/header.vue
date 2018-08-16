@@ -1,111 +1,187 @@
 <template>
-	<div class="header-box">
-		<div class="header-top">
-			<div class="content">
-				<div class="header-top-box">
-					<div class="header-time">
-						<span class="date">2018-08-02</span>
-						<span class="area">13:36:25 GMT</span>
-					</div>
-					<a href="javascript:;" class="service-a">在线客服</a>
-					<div class="language">
-						<i class="left-i"></i>
-						<span>简体中文</span>
-						<i class="right-i"></i>
-						<div class="lang-chose">
-							<span>简体中文</span>
-							<span>繁体中文</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="header">
-			<div class="content clearfix">
-				<div class="header-box">
-					<div class="logo"><img src="../../assets/images/logo.png" alt=""></div>
-					<a href="javascript:;" class="a-register">注册</a>
-					<ul>
-						<li>
-							<router-link class="fir-a" to="/" exact>首页</router-link>
-						</li>
-						<li>
-							<router-link class="fir-a" to="/about/introduce">关于金盛</router-link>
-							<div class="sec-menu">
-								<span>品牌介绍</span>
-								<span>合作伙伴</span>
-								<span>协议声明</span>
-								<span>网站公告</span>
-								<span>投资保障</span>
-							</div>
-						</li>
-						<li>
-							<router-link class="fir-a" to="/research/news">研究中心</router-link>
-							<div class="sec-menu">
-								<span>
-									<router-link to="/research/news1">行情分析</router-link>
-								</span>
-								<span>
-									<router-link to="/research/news2">实盘策略</router-link>
-								</span>
-								<span>
-									<router-link to="/research/news3">金银课堂</router-link>
-								</span>
-								<span>
-									<router-link to="/research/news4">市场动态</router-link>
-								</span>
-							</div>
-						</li>
-						<li>
-							<router-link class="fir-a" to="/product/introduce" exact>交易规则</router-link>
-							<div class="sec-menu">
-								<span>产品介绍</span>
-								<span>金银规则</span>
-								<span>交易术语</span>
-							</div>
-						</li>
-						<li>
-							<router-link class="fir-a" to="/download">平台下载</router-link>
-							<div class="sec-menu">
-								<span>真实开户</span>
-								<span>模拟开户</span>
-								<span>软件下载</span>
-							</div>
-						</li>
-						<li>
-							<router-link class="fir-a" to="/product">代理申请</router-link>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="header-box">
+        <div class="header-top">
+            <div class="content">
+                <div class="header-top-box">
+                    <div class="header-time">
+                        <span class="date">2018-08-02</span>
+                        <span class="area">13:36:25 GMT</span>
+                    </div>
+                    <a href="javascript:;" class="service-a">在线客服</a>
+                    <div class="language">
+                        <i class="left-i"></i>
+                        <span>简体中文</span>
+                        <i class="right-i"></i>
+                        <div class="lang-chose">
+                            <span>简体中文</span>
+                            <span>繁体中文</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="content clearfix">
+                <div class="header-box">
+                    <div class="logo"><img src="../../../static/logo.png" alt=""></div>
+                    <a href="javascript:;" class="a-register">注册</a>
+                    <ul>
+                        <!-- <li>
+                            <router-link class="fir-a" to="/" exact>首页</router-link>
+                        </li> -->
+                        <li v-for="(val, index) in items" v-bind:class="{active:index==dataId}" v-bind:key="index" @click="test(index)">
+                            <a class="fir-a" :href="val.url">{{val.name}}</a>
+                            <div class="sec-menu">
+                                <span v-for="(val2, index2) in val.secmenu" v-bind:key="index2">
+                                    <router-link :to="val2.securl">{{val2.secname}}</router-link>
+                                </span>
+                                <!-- <span>合作伙伴</span>
+                                <span>协议声明</span>
+                                <span>网站公告</span>
+                                <span>投资保障</span> -->
+                            </div>
+                        </li>
+                        <!-- <li>
+                            <router-link class="fir-a" to="/research/news">研究中心</router-link>
+                            <div class="sec-menu">
+                                <span>
+                                    <router-link to="/research/news1">行情分析</router-link>
+                                </span>
+                                <span>
+                                    <router-link to="/research/news2">实盘策略</router-link>
+                                </span>
+                                <span>
+                                    <router-link to="/research/news3">金银课堂</router-link>
+                                </span>
+                                <span>
+                                    <router-link to="/research/news4">市场动态</router-link>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <router-link class="fir-a" to="/product/introduce" exact>交易规则</router-link>
+                            <div class="sec-menu">
+                                <span>产品介绍</span>
+                                <span>金银规则</span>
+                                <span>交易术语</span>
+                            </div>
+                        </li>
+                        <li>
+                            <router-link class="fir-a" to="/download">平台下载</router-link>
+                            <div class="sec-menu">
+                                <span>真实开户</span>
+                                <span>模拟开户</span>
+                                <span>软件下载</span>
+                            </div>
+                        </li>
+                        <li>
+                            <router-link class="fir-a" to="/product">代理申请</router-link>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-	name: "vueHeader",
-	data() {
-		return {
-		}
-	},
-	mounted() {
-		window.addEventListener('scroll', this.handleScroll)
-	},
-	methods: {
-		handleScroll() {
-			var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-			// console.log(scrollTop)
-			var offsetTop = document.querySelector('.header').offsetTop;
+    name: "vueHeader",
+    data() {
+        return {
+            dataId: '0',
+            items: [{
+                url: '/',
+                name: '首页',
+                secmenu: []
+            }, {
+                url: '/#/about',
+                name: '关于金盛',
+                secmenu: [{
+                    securl: '/about/introduce',
+                    secname: '品牌介绍'
+                }, {
+                    securl: '/about',
+                    secname: '合作伙伴'
+                }, {
+                    securl: '/about/protocol',
+                    secname: '协议声明'
+                }, {
+                    securl: '/about/notice',
+                    secname: '网站公告'
+                }, {
+                    securl: '/about/invest',
+                    secname: '投资保障'
+                }]
+            }, {
+                url: '/#/research',
+                name: '研究中心',
+                secmenu: [{
+                    securl: '/research/news1',
+                    secname: '行情分析'
+                }, {
+                    securl: '/research/news2',
+                    secname: '实盘策略'
+                }, {
+                    securl: '/research/news3',
+                    secname: '金银课堂'
+                }, {
+                    securl: '/research/news4',
+                    secname: '市场动态'
+                }]
+            }, {
+                url: '/#/product',
+                name: '交易规则',
+                secmenu: [{
+                    securl: '/product/introduct',
+                    secname: '产品介绍'
+                }, {
+                    securl: '/product/rule',
+                    secname: '金银规则'
+                }, {
+                    securl: '/product/term',
+                    secname: '交易术语'
+                }]
+            }, {
+                url: '/#/download',
+                name: '平台下载',
+                secmenu: [{
+                    securl: '/download',
+                    secname: '真实开户'
+                }, {
+                    securl: '/download',
+                    secname: '模拟开户'
+                }, {
+                    securl: '/download',
+                    secname: '软件下载'
+                }]
+            }, {
+                url: '/#/product',
+                name: '代理申请',
+                secmenu: []
+            },]
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+        handleScroll() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            // console.log(scrollTop)
+            var offsetTop = document.querySelector('.header').offsetTop;
 
-			if (scrollTop <= 16) {
-				offsetTop = 26 - Number(scrollTop);
-				document.querySelector('.header').style.top = offsetTop + 'px';
-			} else {
-				document.querySelector('.header').style.top = '0px';
-			}
-		},
-	}
+            if (scrollTop <= 16) {
+                offsetTop = 26 - Number(scrollTop);
+                document.querySelector('.header').style.top = offsetTop + 'px';
+            } else {
+                document.querySelector('.header').style.top = '0px';
+            }
+        },
+        test(i) {
+            this.dataId = i;
+        }
+    }
 }
 </script>
 
@@ -222,9 +298,6 @@ export default {
                     color: #fff;
                     font-size: 18px;
                 }
-                a.fir-a.router-link-exact-active {
-                    color: #e98024;
-                }
                 .sec-menu {
                     // display: none;
                     width: 100px;
@@ -239,6 +312,7 @@ export default {
                     transition: all 0.5s;
                     span,
                     span a {
+                        height: 36px;
                         display: block;
                         font-size: 16px;
                         line-height: 36px;
@@ -261,6 +335,11 @@ export default {
                         background-color: #2a3052;
                         color: #fff;
                     }
+                }
+            }
+            li.active {
+                a {
+                    color: #e98024;
                 }
             }
         }
