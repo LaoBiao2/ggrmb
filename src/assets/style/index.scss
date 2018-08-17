@@ -4,7 +4,7 @@
     height: 523px;
     padding: 143px 0 129px;
     box-sizing: border-box;
-    background: url(../../static/index/banner_img.png) no-repeat top;
+    background: url(/static/images/index/banner_img.png) no-repeat top;
     h2 {
         font-size: 42px;
         color: #2a3052;
@@ -65,7 +65,7 @@
                 height: 37px;
                 display: block;
                 margin: 0 auto 19px;
-                background: url(../../static/index/index_icon.png) 0 0 no-repeat;
+                background: url(/static/images/index/index_icon.png) 0 0 no-repeat;
             }
             b {
                 font-size: 18px;
@@ -253,7 +253,7 @@
 
 .b3 {
     padding: 68px 0 332px;
-    background: url(../../static/index/b3_img.png) no-repeat bottom;
+    background: url(/static/images/index/b3_img.png) no-repeat bottom;
     background-color: #f2f2f2;
     span.title2 {
         font-size: 16px;
@@ -307,7 +307,7 @@
                     width: 23px;
                     height: 27px;
                     display: inline-block;
-                    background: url(../../static/index/index_icon.png) -10px -101px no-repeat;
+                    background: url(/static/images/index/index_icon.png) -10px -101px no-repeat;
                     vertical-align: -7px;
                     margin-right: 14px;
                 }

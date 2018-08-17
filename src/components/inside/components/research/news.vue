@@ -169,7 +169,7 @@ export default {
                             display: inline-block;
                             vertical-align: -2px;
                             margin-right: 8px;
-                            background: url(../../../../../static/research/research_icon.png)
+                            background: url(/static/images/research/research_icon.png)
                                 0 0 no-repeat;
                         }
                     }

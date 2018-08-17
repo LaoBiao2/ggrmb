@@ -168,8 +168,8 @@ export default {
             width: 141px;
             height: 142px;
             display: inline-block;
-            background: url(../../../../../static/about/introduce_icon.png)
-                no-repeat center;
+            background: url(/static/images/about/introduce_icon.png) no-repeat
+                center;
             position: absolute;
             left: -46px;
             top: 50%;
@@ -210,8 +210,8 @@ export default {
                         height: 60px;
                         display: block;
                         margin: 29px auto;
-                        background: url(../../../../../static/about/about_icon.png)
-                            0 -182px no-repeat;
+                        background: url(/static/images/about/about_icon.png) 0 -182px
+                            no-repeat;
                     }
                 }
                 b {

@@ -21,7 +21,7 @@ export default {
     },
     data() {
         return {
-            // imgUrl: '../../../../static/about/banner.jpg',
+            // imgUrl: '/static/images/about/banner.jpg',
             // bannerTitle: '关于金盛',
         };
     }
@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 .banner {
     height: 256px;
-    // background: url(../../../../static/about/banner.jpg) no-repeat;
+    // background: url(/static/images/about/banner.jpg) no-repeat;
     position: relative;
     .bg-img {
         position: absolute;

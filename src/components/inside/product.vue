@@ -33,7 +33,7 @@ export default {
     },
     data() {
         return {
-            imgUrl: '../../../static/product/banner.jpg',
+            imgUrl: '/static/images/product/banner.jpg',
             bannerTitle: '产品介绍',
             type: this.$route.params.type,
             navData: [{
@@ -77,10 +77,10 @@ body {
     }
     .type_box {
         b {
-            background: url(../../../static/product/product_icon.png) 0 -75px;
+            background: url(/static/images/product/product_icon.png) 0 -75px;
         }
         i {
-            background: url(../../../static/product/product_icon.png);
+            background: url(/static/images/product/product_icon.png);
         }
     }
 }

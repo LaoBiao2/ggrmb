@@ -40,7 +40,7 @@ export default {
     },
     data() {
         return {
-            imgUrl: '../../../static/research/banner.jpg',
+            imgUrl: '/static/images/research/banner.jpg',
             bannerTitle: '产品介绍',
             type: this.$route.params.type,
             navData: [{
@@ -56,8 +56,6 @@ export default {
                 url: '/#/research/news4',
                 name: '市场动态'
             }],
-            Laypage
-
         };
     },
     components: {
@@ -74,6 +72,19 @@ export default {
     watch: {
         $route(to, form) {
             this.type = to.params.type;
+        }
+    },
+    methods: {
+        goToFunction: function (n) {
+            console.log(n);
+        },
+
+        goToFuncWithData: function (n, data) {
+            console.log(n, data);
+        },
+
+        goToFuncWithMultipleData: function (n, data) {
+            console.log(n, data[0], data[1]);
         }
     }
 };
@@ -92,10 +103,10 @@ body {
     }
     .type_box {
         b {
-            background: url(../../../static/research/research_icon.png) 0 -75px;
+            background: url(/static/images/research/research_icon.png) 0 -75px;
         }
         i {
-            background: url(../../../static/research/research_icon.png);
+            background: url(/static/images/research/research_icon.png);
         }
     }
 }

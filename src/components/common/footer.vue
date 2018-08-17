@@ -3,9 +3,9 @@
         <div class="footer">
             <div class="content">
                 <ul class="link-ul">
-                    <li>金盛荣誉</li>
-                    <li>合作机构</li>
-                    <li>友情链接</li>
+                    <li @click="showUl(1)">金盛荣誉</li>
+                    <li @click="showUl(2)">合作机构</li>
+                    <li @click="showUl(3)">友情链接</li>
                     <li>关于金盛</li>
                     <li>市场动态</li>
                     <li>实盘策略</li>
@@ -14,33 +14,60 @@
                     <li>马上咨询</li>
                     <li>申请代理</li>
                 </ul>
-                <ul class="honor">
-                    <i class="honor-i"></i>
-                    <li class="li-1">
-                        <i></i>
-                        <span>贵金属业最佳<br/>交易平台大奖</span>
-                    </li>
-                    <li class="li-2">
-                        <i></i>
-                        <span>贵金属业最佳<br/>交易平台大奖</span>
-                    </li>
-                    <li class="li-3">
-                        <i></i>
-                        <span>贵金属业最佳<br/>交易平台大奖</span>
-                    </li>
-                    <li class="li-4">
-                        <i></i>
-                        <span>贵金属业最佳<br/>交易平台大奖</span>
-                    </li>
-                    <li class="li-5">
-                        <i></i>
-                        <span>贵金属业最佳<br/>交易平台大奖</span>
-                    </li>
-                    <li class="li-6">
-                        <i></i>
-                        <span>贵金属业最佳<br/>交易平台大奖</span>
-                    </li>
-                </ul>
+                <div class="link-div">
+                    <ul class="honor link-c-ul" v-if="showId == 1">
+                        <i class="link-i"></i>
+                        <li class="li-1">
+                            <i></i>
+                            <span>贵金属业最佳<br/>交易平台大奖</span>
+                        </li>
+                        <li class="li-2">
+                            <i></i>
+                            <span>贵金属业最佳<br/>交易平台大奖</span>
+                        </li>
+                        <li class="li-3">
+                            <i></i>
+                            <span>贵金属业最佳<br/>交易平台大奖</span>
+                        </li>
+                        <li class="li-4">
+                            <i></i>
+                            <span>贵金属业最佳<br/>交易平台大奖</span>
+                        </li>
+                        <li class="li-5">
+                            <i></i>
+                            <span>贵金属业最佳<br/>交易平台大奖</span>
+                        </li>
+                        <li class="li-6">
+                            <i></i>
+                            <span>贵金属业最佳<br/>交易平台大奖</span>
+                        </li>
+                    </ul>
+                    <ul class="cooperate link-c-ul" v-else-if="showId === 2">
+                        <i class="link-i"></i>
+                        <li class="icon1"><span></span><i></i></li>
+                        <li class="icon2"><span></span><i></i></li>
+                        <li class="icon3"><span></span><i></i></li>
+                        <li class="icon4"><span></span><i></i></li>
+                        <li class="icon5"><span></span><i></i></li>
+                        <li class="icon6"><span></span><i></i></li>
+                        <li class="icon7"><span></span><i></i></li>
+                        <li class="icon8"><span></span><i></i></li>
+                        <li class="icon9"><span></span><i></i></li>
+                    </ul>
+                    <ul class="link link-c-ul" v-else>
+                        <i class="link-i"></i>
+                        <li><span><a href="javascript:;">物权众筹</a></span></li>
+                        <li><span><a href="javascript:;">合肥求购信息</a></span></li>
+                        <li><span><a href="javascript:;">信托产品</a></span></li>
+                        <li><span><a href="javascript:;">小额贷款</a></span></li>
+                        <li><span><a href="javascript:;">投资资讯</a></span></li>
+                        <li><span><a href="javascript:;">微投资</a></span></li>
+                        <li><span><a href="javascript:;">高端门窗加盟</a></span></li>
+                        <li><span><a href="javascript:;">零和外汇</a></span></li>
+                        <li><span><a href="javascript:;">银收宝</a></span></li>
+                        <li><span><a href="javascript:;">食饼筒</a></span></li>
+                    </ul>
+                </div>
                 <div class="bottom-box clearfix">
                     <div class="left-box">
                         <ul>
@@ -84,6 +111,12 @@ export default {
     name: "vueFooter",
     data() {
         return {
+            showId: 1
+        }
+    },
+    methods: {
+        showUl(i) {
+            this.showId = i;
         }
     }
 }
@@ -104,12 +137,13 @@ export default {
             color: #fff;
             margin-left: 58px;
             line-height: 68px;
+            cursor: pointer;
         }
         li:first-child {
             margin-left: 0;
         }
     }
-    ul.honor {
+    ul.link-c-ul {
         width: 100%;
         height: 95px;
         border: 1px solid #fff;
@@ -118,7 +152,7 @@ export default {
         font-size: 0;
         display: table;
         margin-bottom: 36px;
-        i.honor-i {
+        i.link-i {
             position: absolute;
             width: 0;
             height: 0;
@@ -132,42 +166,129 @@ export default {
             width: 16.6%;
             height: 95px;
             display: inline-block;
-            display: table-cell;
-            vertical-align: middle;
-            color: #fff;
-            font-size: 14px;
-            line-height: 20px;
-            i {
-                width: 71px;
-                height: 82px;
-                display: inline-block;
-                vertical-align: middle;
-                background: url(../../../static/common_icon.png) 0 9px no-repeat;
-            }
             span {
                 display: inline-block;
                 vertical-align: middle;
             }
         }
+    }
+    ul.honor {
+        li {
+            color: #fff;
+            font-size: 14px;
+            line-height: 20px;
+            i {
+                width: 70px;
+                height: 95px;
+                display: inline-block;
+                vertical-align: middle;
+                background: url(/static/images/footer_prize.png) 0 0 no-repeat;
+            }
+        }
         .li-2 i {
-            width: 56px;
-            background-position-x: -105px;
+            background-position-x: -80px;
         }
         .li-3 i {
-            width: 67px;
-            background-position-x: -197px;
+            background-position-x: -160px;
         }
         .li-4 i {
-            width: 68px;
-            background-position-y: -112px;
+            background-position-x: -240px;
         }
         .li-5 i {
-            width: 53px;
-            background-position: -106px -112px;
+            background-position-x: -320px;
         }
         .li-6 i {
-            width: 68px;
-            background-position: -197px -112px;
+            background-position-x: -400px;
+        }
+        li:hover i {
+            background-position-y: -98px;
+        }
+    }
+    ul.cooperate {
+        i.link-i {
+            left: 151px;
+        }
+        li {
+            width: 11.1%;
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            span, i {
+                width: 54px;
+                height: 54px;
+                opacity: 0;
+                background: url(/static/images/footer_partners.png) 0 -55px no-repeat;
+                position: absolute;
+                top: 22px;
+                left: 34px;
+                z-index: 2;
+            }
+            span:hover {
+                // background-position-y: -55px;
+                transition: all 0.5s;
+                opacity: 1;
+            }
+            i {
+                opacity: 1;
+                display: inline-block;
+                background-position-y: -1px;
+                z-index: 1;
+            }
+        }
+        .icon2 {
+            span, i {
+                background-position-x: -85px;
+            }
+        }
+        .icon3 {
+            span, i {
+                background-position-x: -168px;
+            }
+        }
+        .icon4 {
+            span, i {
+                background-position-x: -252px;
+            }
+        }
+        .icon5 {
+            span, i {
+                background-position-x: -336px;
+            }
+        }
+        .icon6 {
+            span, i {
+                background-position-x: -420px;
+            }
+        }
+        .icon7 {
+            span, i {
+                background-position-x: -504px;
+            }
+        }
+        .icon8 {
+            span, i {
+                background-position-x: -588px;
+            }
+        }
+        .icon9 {
+            span, i {
+                background-position-x: -673px;
+            }
+        }
+        
+    }
+    ul.link {
+        i.link-i {
+            left: 279px;
+        }
+        li {
+            width: 10%;
+            span a {
+                    
+                color: #fff;
+                font-size: 14px;
+                line-height: 95px;
+            }
         }
     }
     .bottom-box {
@@ -186,7 +307,7 @@ export default {
                     a {
                         width: 100%;
                         height: 100%;
-                        background: url(../../../static/common_icon.png) -10px -217px
+                        background: url(/static/images/common_icon.png) -10px -217px
                             no-repeat;
                         display: inline-block;
                     }
@@ -222,7 +343,7 @@ export default {
                     width: 91px;
                     height: 41px;
                     display: inline-block;
-                    background: url(../../../static/common_icon.png) -10px -270px
+                    background: url(/static/images/common_icon.png) -10px -270px
                         no-repeat;
                 }
                 .span-2 {

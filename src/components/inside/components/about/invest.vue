@@ -36,40 +36,40 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_1.jpg" alt="">
+                        <img src="/static/images/about/clogo_1.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_2.jpg" alt="">
+                        <img src="/static/images/about/clogo_2.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_3.jpg" alt="">
+                        <img src="/static/images/about/clogo_3.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_4.jpg" alt="">
+                        <img src="/static/images/about/clogo_4.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_5.jpg" alt="">
+                        <img src="/static/images/about/clogo_5.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_6.jpg" alt="">
+                        <img src="/static/images/about/clogo_6.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_7.jpg" alt="">
+                        <img src="/static/images/about/clogo_7.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_8.jpg" alt="">
+                        <img src="/static/images/about/clogo_8.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_9.jpg" alt="">
+                        <img src="/static/images/about/clogo_9.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_10.jpg" alt="">
+                        <img src="/static/images/about/clogo_10.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_11.jpg" alt="">
+                        <img src="/static/images/about/clogo_11.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../../../../../static/about/clogo_12.jpg" alt="">
+                        <img src="/static/images/about/clogo_12.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -133,8 +133,8 @@ export default {
                         height: 60px;
                         display: block;
                         margin: 29px auto;
-                        background: url(../../../../../static/about/about_icon.png)
-                            0 -104px no-repeat;
+                        background: url(/static/images/about/about_icon.png) 0 -104px
+                            no-repeat;
                     }
                 }
                 b {
@@ -209,7 +209,7 @@ export default {
             border-radius: 50%;
             background-color: #fff;
             overflow: hidden;
-            background: url(../../../../../static/about/about_icon.png) -40px -61px
+            background: url(/static/images/about/about_icon.png) -40px -61px
                 no-repeat;
             background-color: #fff;
             -webkit-box-shadow: 1px 1px 18px #6a6a6a;

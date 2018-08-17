@@ -7,7 +7,7 @@
                     <p>MT4是一款国际上最受欢迎的投资看盘交易平台，集行情图表、 技术分析和交易操作三大功能于一身，可进行下单、平仓、限价单、 止损、止赢、查看报表及分析数据等不同操作。功能俱全，方便看盘， 便于了解市场资金流向。客户亦能通过设置止损价和获利价， 不用每分每秒监控市况，亦能确保在第一时间保障最大利润。 目前全球已超过70%的经济公司，选择使用MT4交易软件。 金盛金银（GGPM）MT4平台同时提供MT4桌面版、MT4 IOS版及MT4 adroid版。</p>
                     <div class="banner-content clearfix">
                         <div class="fl">
-                            <img src="../../static/download/banner_img.png" alt="">
+                            <img src="/static/images/download/banner_img.png" alt="">
                             <p>
                                 <i class="p-i"></i>
                                 <b>MT4操作指引：</b>
@@ -132,13 +132,13 @@ export default {
     padding-top: 90px;
     box-sizing: border-box;
     overflow: hidden;
-    background: url(../../static/download/banner_bg.png) no-repeat center;
+    background: url(/static/images/download/banner_bg.png) no-repeat center;
     span {
         width: 256px;
         height: 47px;
         display: block;
-        margin: 0 auto;
-        background: url(../../static/download/mt4logo.png) no-repeat center;
+        margin: 0 auto 60px;
+        background: url(/static/images/download/mt4logo.png) no-repeat center;
     }
     p {
         font-size: 16px;
@@ -159,7 +159,7 @@ export default {
                 }
                 i {
                     display: inline-block;
-                    background: url(../../static/download/download_icon.png) -19px
+                    background: url(/static/images/download/download_icon.png) -19px
                         0 no-repeat;
                 }
                 .p-i {
@@ -174,7 +174,7 @@ export default {
                     i {
                         width: 13px;
                         height: 13px;
-                        background: url(../../static/download/download_icon.png) -75px -8px
+                        background: url(/static/images/download/download_icon.png) -75px -8px
                             no-repeat;
                         margin-right: 5px;
                     }
@@ -205,7 +205,7 @@ export default {
                         display: inline-block;
                         width: 23px;
                         height: 26px;
-                        background: url(../../static/download/download_icon.png) -121px -2px
+                        background: url(/static/images/download/download_icon.png) -121px -2px
                             no-repeat;
                         vertical-align: middle;
                         margin-right: 14px;
@@ -254,7 +254,7 @@ export default {
                 height: 60px;
                 display: inline-block;
                 vertical-align: middle;
-                background: url(../../static/download/download_icon.png) 0 -68px
+                background: url(/static/images/download/download_icon.png) 0 -68px
                     no-repeat;
             }
             .txt {

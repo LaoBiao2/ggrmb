@@ -72,7 +72,7 @@ export default {
                     display: block;
                     width: 42px;
                     height: 61px;
-                    background: url(../../../../../static/product/product_icon.png)
+                    background: url(/static/images/product/product_icon.png)
                         no-repeat;
                 }
                 b {
@@ -82,7 +82,7 @@ export default {
                     display: block;
                     width: 31px;
                     height: 27px;
-                    // background: url(../../../../../static/product/product_icon.png) no-repeat -265px 0;
+                    // background: url(/static/images/product/product_icon.png) no-repeat -265px 0;
                 }
                 h4 {
                     font-size: 20px;

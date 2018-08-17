@@ -23,7 +23,7 @@
         <div class="header">
             <div class="content clearfix">
                 <div class="header-box">
-                    <div class="logo"><img src="../../../static/logo.png" alt=""></div>
+                    <div class="logo"><img src="/static/images/logo.png" alt=""></div>
                     <a href="javascript:;" class="a-register">注册</a>
                     <ul>
                         <!-- <li>
@@ -133,7 +133,7 @@ export default {
                 url: '/#/product',
                 name: '交易规则',
                 secmenu: [{
-                    securl: '/product/introduct',
+                    securl: '/product/introduce',
                     secname: '产品介绍'
                 }, {
                     securl: '/product/rule',

@@ -65,7 +65,7 @@
                         <div class="nav-c1">
                             <div class="left-box">
                                 <div class="img-box">
-                                    <img src="../../static/index/nav_img.jpg" alt="">
+                                    <img src="/static/images/index/nav_img.jpg" alt="">
                                 </div>
                                 <a href="javascript:;">了解详情</a>
                             </div>

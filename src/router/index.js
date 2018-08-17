@@ -12,6 +12,7 @@ Vue.use(Router)
 Vue.use(Meta)
 
 export default new Router({
+    // mode: "history",
     routes: [{
         path: '/',
         name: 'Index',
@@ -26,7 +27,7 @@ export default new Router({
         component: Product,
     }, {
         path: '/product/introduce',
-        name: 'Inside',
+        name: 'Product',
         component: Product,
         alias: '/product'
     }, {
@@ -35,7 +36,7 @@ export default new Router({
         component: About,
     }, {
         path: '/about/introduce',
-        name: 'Inside',
+        name: 'About',
         component: About,
         alias: '/about'
     }, {

@@ -90,14 +90,14 @@ export default {
             width: 10px;
             height: 18px;
             margin: 5px 30px 0 50px;
-            // background: url(../../../static/about/about_icon.png) 0 -75px;
+            // background: url(/static/images/about/about_icon.png) 0 -75px;
         }
         i {
             float: right;
             width: 29px;
             height: 29px;
             margin-right: 55px;
-            // background: url(../../../static/about/about_icon.png);
+            // background: url(/static/images/about/about_icon.png);
         }
         span {
             float: left;

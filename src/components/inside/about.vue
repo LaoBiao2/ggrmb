@@ -34,7 +34,7 @@ export default {
     },
     data() {
         return {
-            imgUrl: '../../../static/about/banner.jpg',
+            imgUrl: '/static/images/about/banner.jpg',
             bannerTitle: '关于金盛',
             type: this.$route.params.type,
             navData: [{
@@ -82,10 +82,10 @@ body {
     }
     .type_box {
         b {
-            background: url(../../../static/about/about_icon.png) 0 -75px;
+            background: url(/static/images/about/about_icon.png) 0 -75px;
         }
         i {
-            background: url(../../../static/about/about_icon.png);
+            background: url(/static/images/about/about_icon.png);
         }
     }
 }
