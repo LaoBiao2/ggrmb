@@ -34,10 +34,16 @@ export default {
     // background: url(/static/images/about/banner.jpg) no-repeat;
     position: relative;
     .bg-img {
+        min-width: 1200px;
+        height: 256px;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     .txt {
         display: table-cell;

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <vue-header></vue-header>
-        <router-view v-wechat-title="$route.meta.title"></router-view>
+        <router-view></router-view>
         <vue-footer></vue-footer>
     </div>
 </template>

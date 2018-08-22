@@ -85,7 +85,7 @@ export default {
 <style lang="scss">
 .research-box.news {
     .research-content {
-        margin-top: 52px;
+        // margin-top: 52px;
         ul.research-ul {
             width: 805px;
             margin: 16px auto;

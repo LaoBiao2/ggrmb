@@ -67,6 +67,7 @@ export default {
         width: 882px;
         border-radius: 5px;
         overflow: hidden;
+        background-color: #fff;
         h4 {
             height: 68px;
             line-height: 68px;

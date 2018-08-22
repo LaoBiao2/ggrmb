@@ -71,11 +71,11 @@ export default {
 
 <style lang="scss">
 body {
-    background: #f5f7f9;
+    background: #f5f7f9 !important;
 }
 //
 .research {
-    margin-top: 50px;
+    padding-top: 50px;
     padding-bottom: 50px;
     .research-box {
         width: 915px;

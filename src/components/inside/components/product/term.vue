@@ -83,6 +83,8 @@ export default {
 <style lang="scss">
 .product-box.term {
     width: 880px;
+    background-color: #fff;
+    padding: 28px 0 38px;
     .nav-box {
         width: 815px;
         margin: 0 auto;
@@ -132,6 +134,7 @@ export default {
                 margin-bottom: 26px;
                 display: block;
                 transition: all 0.3s;
+                background-color: #f9f9f9;
                 i {
                     width: 2px;
                     height: 22px;

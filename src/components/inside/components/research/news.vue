@@ -90,6 +90,7 @@ export default {
         // margin-top: 52px;
         ul.research-ul {
             width: 805px;
+            background-color: #fff;
             margin: 0 auto;
             font-size: 0;
             border-bottom: 1px solid #d5d5d5;

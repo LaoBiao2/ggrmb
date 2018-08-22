@@ -4,11 +4,12 @@
             <inside-banner :bannerTitle="bannerTitle" :imgUrl="imgUrl"></inside-banner>
             <div class="content research clearfix">
                 <div class="fl">
-                    <component v-bind:is="type"></component>
-                    <paging></paging>
+                    <div class="research-c">
+                        <component v-bind:is="type"></component>
+                        <paging></paging>
+                    </div>
                 </div>
                 <inside-nav :navData="navData"></inside-nav>
-
             </div>
         </div>
     </div>
@@ -92,14 +93,24 @@ export default {
 
 <style lang="scss">
 body {
-    background: #f5f7f9;
+    background: #f5f7f9 !important;
 }
 //
 .research {
-    margin-top: 50px;
+    padding-top: 50px;
     padding-bottom: 50px;
     .research-box {
         width: 915px;
+        .research-content {
+            margin-top: -16px;
+        }
+    }
+    .research-c {
+        background-color: #fff;
+        width: 882px;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 43px;
     }
     .type_box {
         b {

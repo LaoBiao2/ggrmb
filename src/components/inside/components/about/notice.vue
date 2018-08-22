@@ -94,11 +94,13 @@ export default {
 
 <style lang="scss">
 .about-box.notice {
+    background-color: #fff;
+    padding-bottom: 43px;
     ul.notice-list {
         display: block;
         margin: 0 auto;
-        padding: 28px 0 40px;
-        width: 805px;
+        padding: 28px 40px 40px;
+        width: 885px;
         border-bottom: 1px solid #d5d5d5;
         li {
             height: 62px;

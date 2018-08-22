@@ -51,8 +51,8 @@
                     <td colspan="2">
                         <p>
                             北京时间周一上午6:31至周六凌晨3:30（夏令期间） 周一上午7:01至周六凌晨4:00（冬令期间）
-                        <br/>期间美国夏令时凌晨5点到6点（美国冬令早上6点到7点）为结算时间，无法进行交易。
-                        <br/>结算时间若有零星价格波动，不影响交易单盈亏。结算时间过后夏令6:01分(冬令7:01分)开市交易。
+                            <br/>期间美国夏令时凌晨5点到6点（美国冬令早上6点到7点）为结算时间，无法进行交易。
+                            <br/>结算时间若有零星价格波动，不影响交易单盈亏。结算时间过后夏令6:01分(冬令7:01分)开市交易。
                         </p>
                     </td>
                 </tr>
@@ -92,89 +92,94 @@
 
 <script>
 export default {
-    name:'rule'
+    name: 'rule'
 }
 </script>
 
 <style lang="scss">
 .product-box.rule {
-        width: 880px;
-        .table-box {
-            width: 800px;
-            /* height: 800px; */
-            text-align: center;
-            border-radius: 5px;
-            overflow: hidden;
-            border: 1px solid #b1b1b1;
-            table {
-                width: 100%;
-                table-layout:fixed;
-                tr:first-child {
-                    background-color: #0e2752;
-                    border-top: none;
-                    td {
-                        color: #fff;
-                    }
-                }
-                tr {
-                    border-top: 1px solid #b1b1b1;
-                    td {
-                        width: 33.3%;
-                        height: 60px;
-                        line-height: 26px;
-                        border-left: 1px solid #b1b1b1;
-                        font-size: 16px;
-                        color: #666;
-                    }
-                    td:first-child {
-                        border-left: none;
-                    }
-                }
-                tr:last-child {
-                    td:last-child {
-                        text-align: left;
-                        p {
-                            font-size: 16px;
-                            line-height: 26px;
-                            width: 464px;
-                            margin: 18px auto;
-                        }
-                    }
+    width: 882px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 35px 0;
+    .table-box {
+        width: 800px;
+        /* height: 800px; */
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #b1b1b1;
+        table {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f9f9f9;
+            tr:first-child {
+                background-color: #0e2752;
+                border-top: none;
+                td {
+                    color: #fff;
                 }
             }
-        }
-        .remark-box {
-            width: 800px;
-            text-align: left;
-            margin-top: 22px;
-            font-size: 16px;
-            color: #333;
-            ul {
-                margin: 10px 0 0 38px;
-                li {
-                    width: 100%;
-                    font-size: 14px;
+            tr {
+                border-top: 1px solid #b1b1b1;
+                td {
+                    width: 33.3%;
+                    height: 60px;
+                    line-height: 26px;
+                    border-left: 1px solid #b1b1b1;
+                    font-size: 16px;
                     color: #666;
-                    margin-bottom: 24px;
-                    display: block;
-                    i {
-                        width: 5px;
-                        height: 5px;
-                        border-radius: 50%;
-                        background-color: #2e8836;
-                        float: left;
-                        margin: 10px 18px 0 0;
-                    }
+                }
+                td:first-child {
+                    border-left: none;
+                }
+            }
+            tr:last-child {
+                td:last-child {
+                    text-align: left;
                     p {
-                        // float: left;
-                        display: block;
-                        line-height: 24px;
-                        padding-left: 23px;
-                        box-sizing: border-box;
+                        font-size: 16px;
+                        line-height: 26px;
+                        width: 464px;
+                        margin: 18px auto;
                     }
                 }
             }
         }
     }
+    .remark-box {
+        width: 800px;
+        text-align: left;
+        margin: 22px auto 0;
+        font-size: 16px;
+        color: #333;
+        ul {
+            margin: 10px 0 0 38px;
+            li {
+                width: 100%;
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 24px;
+                display: block;
+                i {
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: #2e8836;
+                    float: left;
+                    margin: 10px 18px 0 0;
+                }
+                p {
+                    // float: left;
+                    display: block;
+                    line-height: 24px;
+                    padding-left: 23px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
 </style>
 

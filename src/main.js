@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
 import './assets/style/common.css'
-import VueWechatTitle from 'vue-wechat-title';
-Vue.use(VueWechatTitle)
+
+Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

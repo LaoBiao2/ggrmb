@@ -316,7 +316,6 @@ export default {
                         display: block;
                         font-size: 16px;
                         line-height: 36px;
-                        margin: 1px;
                         cursor: pointer;
                         color: #333;
                     }

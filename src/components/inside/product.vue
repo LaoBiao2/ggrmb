@@ -66,11 +66,11 @@ export default {
 
 <style lang="scss">
 body {
-    background: #f5f7f9;
+    background: #f5f7f9 !important;
 }
 //
 .product {
-    margin-top: 50px;
+    padding-top: 50px;
     padding-bottom: 50px;
     .product-box {
         width: 915px;

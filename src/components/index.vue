@@ -1,6 +1,7 @@
 <template>
     <div class="hello">
         <div class="content-top">
+            <button @click="jsonpData">Test</button>
             <div class="banner">
                 <h2>金盛贵金属代理平台</h2>
                 <h4>选择金盛GGFSG 您事业的转折点</h4>
@@ -162,6 +163,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: "Index",
     metaInfo: {
@@ -177,13 +179,44 @@ export default {
     data() {
         return {
             dataId: '0',
-            items: ['行情分析', '市场动态', '实盘策略', '金银课堂']
-        };
+            test: [],
+            items: ['行情分析', '市场动态', '实盘策略', '金银课堂'],
+            cs: ''
+        }
     },
     methods: {
         addC(i) {
             this.dataId = i;
+            console.log(this.test);
+        },
+        jsonpData() {
+            var url = '/api/about/index';
+            let postData = {
+            　　companyCode:'tur',
+            　　userName:'123456789123456789',
+            　　password:'123456'
+            }
+            axios.get('/api/about/index')
+            .then(this.css)
+            //     function (response) {
+            // 　　console.log(789);
+            // // 　　console.log(response.data);
+            //     // this.cs = response.data;
+            //     // this.test = response.data;
+            //     console.log(this.cs)
+            //     return response.data
+            // })
+            // .catch(function (error) {
+            // 　　console.log(error);
+            // });
+        },
+        css(res) {
+            this.cs = res.data;
+            console.log(this.cs);
         }
+    },
+    mounted() {
+        this.jsonpData()
     },
 };
 </script>
@@ -192,3 +225,4 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/style/index";
 </style>
+

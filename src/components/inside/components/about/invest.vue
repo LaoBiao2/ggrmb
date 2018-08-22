@@ -33,6 +33,7 @@
             </ul>
         </div>
         <div class="about-swiper">
+            <span class="title-span">合作伙伴</span>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -105,7 +106,7 @@ export default {
 .about-box.invest {
     width: 886px;
     .about-content {
-        margin-top: 52px;
+        // margin-top: 52px;
         ul {
             width: 884px;
             margin: 0 auto;
@@ -118,6 +119,10 @@ export default {
                 margin-bottom: 16px;
                 display: block;
                 transition: all 0.3s;
+                background-color: #fff;
+                -webkit-box-shadow: 1px 1px 18px rgba(183, 183, 183, .5);
+                -moz-box-shadow: 1px 1px 18px rgba(183, 183, 183, .5);
+                box-shadow: 1px 1px 18px rgba(183, 183, 183, .5);
                 .span-i {
                     width: 125px;
                     height: 118px;
@@ -154,9 +159,9 @@ export default {
             }
             li.active,
             li:hover {
-                -webkit-box-shadow: 1px 1px 18px #b7b7b7;
-                -moz-box-shadow: 1px 1px 18px #b7b7b7;
-                box-shadow: 1px 1px 18px #b7b7b7;
+                -webkit-box-shadow: 1px 1px 18px rgba(183, 183, 183, .8);
+                -moz-box-shadow: 1px 1px 18px rgba(183, 183, 183, .8);
+                box-shadow: 1px 1px 18px rgba(183, 183, 183, .8);
             }
             .li-2 {
                 .span-i {
@@ -195,6 +200,14 @@ export default {
     }
     .about-swiper {
         position: relative;
+        span.title-span {
+            font-size: 20px;
+            color: #666;
+            display: block;
+            margin: 50px auto;
+            text-align: center;
+            font-weight: bold;
+        }
         .swiper-container {
             // width: 882px;
             // height: 74px;
@@ -212,16 +225,17 @@ export default {
             background: url(/static/images/about/about_icon.png) -40px -61px
                 no-repeat;
             background-color: #fff;
-            -webkit-box-shadow: 1px 1px 18px #6a6a6a;
-            -moz-box-shadow: 1px 1px 18px #6a6a6a;
-            box-shadow: 1px 1px 18px #6a6a6a;
+            -webkit-box-shadow: 0px 0px 12px rgba(106, 106, 106, .3);
+            -moz-box-shadow: 0px 0px 12px rgba(106, 106, 106, .3);
+            box-shadow: 0px 0px 12px rgba(106, 106, 106, .3);
+            margin-top: 15px;
         }
         .swiper-button-prev {
             left: -53px;
         }
         .swiper-button-next {
             background-position-x: -72px;
-            right: -46px;
+            right: -53px;
         }
     }
 }

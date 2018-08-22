@@ -238,6 +238,7 @@ export default {
 .b1 {
     text-align: center;
     padding: 63px 0;
+    background-color: #fff;
     .item {
         width: 374px;
         height: 110px;

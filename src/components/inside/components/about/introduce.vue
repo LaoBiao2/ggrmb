@@ -195,6 +195,7 @@ export default {
                 margin-bottom: 16px;
                 display: block;
                 transition: all 0.3s;
+                background-color: #fff;
                 .span-i {
                     width: 125px;
                     height: 118px;
