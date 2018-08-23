@@ -22,35 +22,37 @@ import Notice from "./components/about/notice.vue";
 import Invest from "./components/about/invest.vue";
 export default {
     name: "about",
-    metaInfo: {
-        title: 'about',
-        meta: [{
-            name: "keywords",
-            content: "about黄金暴跌,黄金多头"
-        }, {
-            name: "description",
-            content: "about黄金本周开局就失守1200美元关键心理关口，周二多头试图重夺该关口，但斩戟而归，周三相继失守。"
-        }]
-    },
     data() {
         return {
             imgUrl: '/static/images/about/banner.jpg',
             bannerTitle: '关于金盛',
             type: this.$route.params.type,
             navData: [{
-                url: '/#/about/introduce',
+                url: '/about/introduce',
                 name: '品牌介绍'
             }, {
-                url: '/#/about/protocol',
+                url: '/about/protocol',
                 name: '协议声明'
             }, {
-                url: '/#/about/notice',
+                url: '/about/notice',
                 name: '网站公告'
             }, {
-                url: '/#/about/invest',
+                url: '/about/invest',
                 name: '投资保障'
-            }]
+            }],
+            pageTitle: '',
+            pageKeywords: '',
+            pageDescription: '',
         };
+    },
+    metaInfo() {
+        return {
+            title: this.pageTitle,
+            meta: [
+                { vmid: 'keywords', name: 'keywords', content: this.pageKeywords},
+                { vmid: 'description', name: 'description', content: this.pageDescription}
+            ]
+        }
     },
     components: {
         insideBanner,
@@ -60,11 +62,25 @@ export default {
         Notice,
         Invest
     },
-
     watch: {
         $route(to, form) {
             this.type = to.params.type;
         }
+    },
+    methods: {
+        jsonpData() {
+            this.$axios.get('/api/about/index')
+            .then(this.cs);
+        },
+        cs(res) {
+            this.pageTitle = res.data.header.title;
+            this.pageKeywords = res.data.header.keywords;
+            this.pageDescription = res.data.header.descriptions;
+            console.log(res.data);
+        }
+    },
+    mounted() {
+        this.jsonpData();
     }
 };
 </script>

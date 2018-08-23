@@ -23,60 +23,17 @@
         <div class="header">
             <div class="content clearfix">
                 <div class="header-box">
-                    <div class="logo"><img src="/static/images/logo.png" alt=""></div>
+                    <div class="logo"><img :src=logoUrl alt=""></div>
                     <a href="javascript:;" class="a-register">注册</a>
                     <ul>
-                        <!-- <li>
-                            <router-link class="fir-a" to="/" exact>首页</router-link>
-                        </li> -->
-                        <li v-for="(val, index) in items" v-bind:class="{active:index==dataId}" v-bind:key="index" @click="test(index)">
+                        <li v-for="(val, index) in navParent" v-bind:class="{active:index==dataId}" v-bind:key="index" @click="test(index)">
                             <a class="fir-a" :href="val.url">{{val.name}}</a>
                             <div class="sec-menu">
-                                <span v-for="(val2, index2) in val.secmenu" v-bind:key="index2">
-                                    <router-link :to="val2.securl">{{val2.secname}}</router-link>
-                                </span>
-                                <!-- <span>合作伙伴</span>
-                                <span>协议声明</span>
-                                <span>网站公告</span>
-                                <span>投资保障</span> -->
-                            </div>
-                        </li>
-                        <!-- <li>
-                            <router-link class="fir-a" to="/research/news">研究中心</router-link>
-                            <div class="sec-menu">
-                                <span>
-                                    <router-link to="/research/news1">行情分析</router-link>
-                                </span>
-                                <span>
-                                    <router-link to="/research/news2">实盘策略</router-link>
-                                </span>
-                                <span>
-                                    <router-link to="/research/news3">金银课堂</router-link>
-                                </span>
-                                <span>
-                                    <router-link to="/research/news4">市场动态</router-link>
+                                <span v-if="val.id == val2.pid" v-for="(val2, index2) in navChild" v-bind:key="index2">
+                                    <router-link :to="val2.url">{{val2.name}}</router-link>
                                 </span>
                             </div>
                         </li>
-                        <li>
-                            <router-link class="fir-a" to="/product/introduce" exact>交易规则</router-link>
-                            <div class="sec-menu">
-                                <span>产品介绍</span>
-                                <span>金银规则</span>
-                                <span>交易术语</span>
-                            </div>
-                        </li>
-                        <li>
-                            <router-link class="fir-a" to="/download">平台下载</router-link>
-                            <div class="sec-menu">
-                                <span>真实开户</span>
-                                <span>模拟开户</span>
-                                <span>软件下载</span>
-                            </div>
-                        </li>
-                        <li>
-                            <router-link class="fir-a" to="/product">代理申请</router-link>
-                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -90,80 +47,15 @@ export default {
     data() {
         return {
             dataId: '0',
-            items: [{
-                url: '/',
-                name: '首页',
-                secmenu: []
-            }, {
-                url: '/#/about',
-                name: '关于金盛',
-                secmenu: [{
-                    securl: '/about/introduce',
-                    secname: '品牌介绍'
-                }, {
-                    securl: '/about',
-                    secname: '合作伙伴'
-                }, {
-                    securl: '/about/protocol',
-                    secname: '协议声明'
-                }, {
-                    securl: '/about/notice',
-                    secname: '网站公告'
-                }, {
-                    securl: '/about/invest',
-                    secname: '投资保障'
-                }]
-            }, {
-                url: '/#/research',
-                name: '研究中心',
-                secmenu: [{
-                    securl: '/research/news1',
-                    secname: '行情分析'
-                }, {
-                    securl: '/research/news2',
-                    secname: '实盘策略'
-                }, {
-                    securl: '/research/news3',
-                    secname: '金银课堂'
-                }, {
-                    securl: '/research/news4',
-                    secname: '市场动态'
-                }]
-            }, {
-                url: '/#/product',
-                name: '交易规则',
-                secmenu: [{
-                    securl: '/product/introduce',
-                    secname: '产品介绍'
-                }, {
-                    securl: '/product/rule',
-                    secname: '金银规则'
-                }, {
-                    securl: '/product/term',
-                    secname: '交易术语'
-                }]
-            }, {
-                url: '/#/download',
-                name: '平台下载',
-                secmenu: [{
-                    securl: '/download',
-                    secname: '真实开户'
-                }, {
-                    securl: '/download',
-                    secname: '模拟开户'
-                }, {
-                    securl: '/download',
-                    secname: '软件下载'
-                }]
-            }, {
-                url: '/#/product',
-                name: '代理申请',
-                secmenu: []
-            },]
         }
     },
+    props: {
+        logoUrl: '',
+        navParent: '',
+        navChild: '',
+    },
     mounted() {
-        window.addEventListener('scroll', this.handleScroll)
+        window.addEventListener('scroll', this.handleScroll);
     },
     methods: {
         handleScroll() {
@@ -180,7 +72,7 @@ export default {
         },
         test(i) {
             this.dataId = i;
-        }
+        },
     }
 }
 </script>

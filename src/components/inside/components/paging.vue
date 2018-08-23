@@ -27,6 +27,19 @@ export default {
     },
     components: {
         VuePaginateAl
+    },
+    methods: {
+        goToFunction: function (n) {
+            console.log(n);
+        },
+
+        goToFuncWithData: function (n, data) {
+            console.log(n, data);
+        },
+
+        goToFuncWithMultipleData: function (n, data) {
+            console.log(n, data[0], data[1]);
+        }
     }
 };
 </script>

@@ -1,12 +1,11 @@
 <template>
     <div class="hello">
         <div class="content-top">
-            <button @click="jsonpData">Test</button>
             <div class="banner">
                 <h2>金盛贵金属代理平台</h2>
                 <h4>选择金盛GGFSG 您事业的转折点</h4>
                 <div class="a-box">
-                    <a href="javascript:;" class="a-consult">代理业务咨询</a>
+                    <a :href="serviceUrl" class="a-consult">代理业务咨询</a>
                     <a href="javascript:;" class="a-account">开立免费账户</a>
                 </div>
             </div>
@@ -53,17 +52,14 @@
                     <h5 class="title">行情资讯</h5>
                     <div class="nav-top clearfix">
                         <ul>
-                            <li v-for="(val, index) in items" v-bind:key="index" v-bind:class="{active:index==dataId}" @click="addC(index)">{{val}}
+                            <li v-for="(val, index) in itemMenu" v-bind:key="index" v-bind:class="{active:index==dataId}" @click="addC(index)">{{val.name}}
                                 <i></i>
                             </li>
-                            <!-- <li>市场动态<i></i></li>
-							<li>实盘策略<i></i></li>
-							<li>金银课堂<i></i></li> -->
                         </ul>
                         <a href="javascript:;" class="more-a">More &gt;</a>
                     </div>
                     <div class="nav-content clearfix">
-                        <div class="nav-c1">
+                        <div class="nav-c1" v-for="(v, i) in list" v-bind:key="i" v-if="v.id == dataId">
                             <div class="left-box">
                                 <div class="img-box">
                                     <img src="/static/images/index/nav_img.jpg" alt="">
@@ -71,45 +67,13 @@
                                 <a href="javascript:;">了解详情</a>
                             </div>
                             <ul>
-                                <li class="active clearfix">
+                                <li class="clearfix" v-for="(val, index) in v.items" v-bind:key="index" :class="{active: index == itemsId}" @mouseenter="enter(index)" :data-newsid="val.news_id">
                                     <div class="content-box">
                                         <p class="li-title">
-                                            <i></i>市场静待欧银决议 黄金短线调整</p>
-                                        <p class="li-content">周三黄金开盘，价格小幅上涨，日内整体波动相对狭窄。上 周特朗普连续两个交易日对美联储表达不满情...</p>
+                                            <i></i>{{val.title}}</p>
+                                        <p class="li-content">{{val.descriptions}}</p>
                                     </div>
-                                    <span class="date">2018-07-25</span>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="content-box">
-                                        <p class="li-title">
-                                            <i></i>市场静待欧银决议 黄金短线调整</p>
-                                        <p class="li-content">周三黄金开盘，价格小幅上涨，日内整体波动相对狭窄。上 周特朗普连续两个交易日对美联储表达不满情...</p>
-                                    </div>
-                                    <span class="date">2018-07-25</span>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="content-box">
-                                        <p class="li-title">
-                                            <i></i>市场静待欧银决议 黄金短线调整</p>
-                                        <p class="li-content">周三黄金开盘，价格小幅上涨，日内整体波动相对狭窄。上 周特朗普连续两个交易日对美联储表达不满情...</p>
-                                    </div>
-                                    <span class="date">2018-07-25</span>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="content-box">
-                                        <p class="li-title">
-                                            <i></i>市场静待欧银决议 黄金短线调整</p>
-                                        <p class="li-content">周三黄金开盘，价格小幅上涨，日内整体波动相对狭窄。上 周特朗普连续两个交易日对美联储表达不满情...</p>
-                                    </div>
-                                    <span class="date">2018-07-25</span>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="content-box">
-                                        <p class="li-title">
-                                            <i></i>市场静待欧银决议 黄金短线调整</p>
-                                        <p class="li-content">周三黄金开盘，价格小幅上涨，日内整体波动相对狭窄。上 周特朗普连续两个交易日对美联储表达不满情...</p>
-                                    </div>
-                                    <span class="date">2018-07-25</span>
+                                    <span class="date">{{val.create_time}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -163,25 +127,40 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
     name: "Index",
-    metaInfo: {
-        title: 'Index',
-        meta: [{
-            name: "keywords",
-            content: "Index黄金暴跌,黄金多头"
-        }, {
-            name: "description",
-            content: "Index黄金本周开局就失守1200美元关键心理关口，周二多头试图重夺该关口，但斩戟而归，周三相继失守。"
-        }]
-    },
     data() {
         return {
             dataId: '0',
-            test: [],
-            items: ['行情分析', '市场动态', '实盘策略', '金银课堂'],
-            cs: ''
+            pageTitle: '',
+            pageKeywords: '',
+            pageDescription: '',
+            serviceUrl: '',
+            itemMenu: [],
+            itemsId: 0,
+            list: [{
+                id: 0,
+                items: []
+            }, {
+                id: 1,
+                items: []
+            }, {
+                id: 2,
+                items: []
+            }, {
+                id: 3,
+                items: []
+            }]
+            
+        }
+    },
+    metaInfo() {
+        return {
+            title: this.pageTitle,
+            meta: [
+                { vmid: 'keywords', name: 'keywords', content: this.pageKeywords},
+                { vmid: 'description', name: 'description', content: this.pageDescription}
+            ]
         }
     },
     methods: {
@@ -189,34 +168,28 @@ export default {
             this.dataId = i;
             console.log(this.test);
         },
-        jsonpData() {
-            var url = '/api/about/index';
-            let postData = {
-            　　companyCode:'tur',
-            　　userName:'123456789123456789',
-            　　password:'123456'
-            }
-            axios.get('/api/about/index')
-            .then(this.css)
-            //     function (response) {
-            // 　　console.log(789);
-            // // 　　console.log(response.data);
-            //     // this.cs = response.data;
-            //     // this.test = response.data;
-            //     console.log(this.cs)
-            //     return response.data
-            // })
-            // .catch(function (error) {
-            // 　　console.log(error);
-            // });
+        enter(index) {
+            this.itemsId = index;
         },
-        css(res) {
-            this.cs = res.data;
-            console.log(this.cs);
+        jsonpData() {
+            this.$axios.get('/api/index/index_data')
+            .then(this.cs);
+        },
+        cs(res) {
+            this.pageTitle = res.data.header.title;
+            this.pageKeywords = res.data.header.keywords;
+            this.pageDescription = res.data.header.descriptions;
+            this.serviceUrl = res.data.base.service_url;
+            this.itemMenu = res.data.menu;
+            this.list[0].items = res.data.analysis;
+            this.list[1].items = res.data.information;
+            this.list[2].items = res.data.celue;
+            this.list[3].items = res.data.xuetang;
+            console.log(res.data);
         }
     },
     mounted() {
-        this.jsonpData()
+        this.jsonpData();
     },
 };
 </script>

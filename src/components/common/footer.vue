@@ -87,8 +87,8 @@
                                 <a href="javascript:;"></a>
                             </li>
                         </ul>
-                        <span class="copyright">Copyright 2017-2018 © GGFSG 金盛金融</span>
-                        <span class="tip">投资有风险，选择需谨慎，预期或测算收益不等于实际收益。 </span>
+                        <span class="copyright">{{copyright}}</span>
+                        <span class="tip">{{anno}}</span>
                     </div>
                     <div class="right-box">
                         <div>
@@ -98,7 +98,7 @@
                         </div>
                         <a href="javascript:;" class="service">
                             <i></i>在线客服</a>
-                        <span class="tel">客服热线：400-009-2727</span>
+                        <span class="tel">客服热线：{{phone}}</span>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,13 @@ export default {
     name: "vueFooter",
     data() {
         return {
-            showId: 1
+            showId: 1,
         }
+    },
+    props: {
+        copyright: '',
+        anno: '',
+        phone: '',
     },
     methods: {
         showUl(i) {

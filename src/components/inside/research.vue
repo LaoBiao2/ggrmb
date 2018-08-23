@@ -74,19 +74,6 @@ export default {
         $route(to, form) {
             this.type = to.params.type;
         }
-    },
-    methods: {
-        goToFunction: function (n) {
-            console.log(n);
-        },
-
-        goToFuncWithData: function (n, data) {
-            console.log(n, data);
-        },
-
-        goToFuncWithMultipleData: function (n, data) {
-            console.log(n, data[0], data[1]);
-        }
     }
 };
 </script>
